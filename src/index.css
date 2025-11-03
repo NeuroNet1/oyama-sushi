@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Main colors - Primary palette */
+    --background: 240 100% 99%;
+    --foreground: 0 0% 10%;
+
+    --card: 220 13% 91%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 240 100% 99%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 10%;
+    --primary-foreground: 240 100% 99%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 13% 46%;
+
+    --accent: 0 100% 27%;
+    --accent-foreground: 240 100% 99%;
+
+    --gold: 45 82% 48%;
+    --gold-foreground: 0 0% 10%;
+
+    --destructive: 0 100% 27%;
+    --destructive-foreground: 240 100% 99%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 100% 27%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --hero-overlay: 0 0% 0%;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 240 100% 99%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 240 100% 99%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 240 100% 99%;
+
+    --primary: 240 100% 99%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 220 13% 46%;
+    --secondary-foreground: 240 100% 99%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 13% 91%;
+
+    --accent: 0 100% 27%;
+    --accent-foreground: 240 100% 99%;
+
+    --gold: 45 82% 48%;
+    --gold-foreground: 0 0% 10%;
+
+    --destructive: 0 100% 27%;
+    --destructive-foreground: 240 100% 99%;
+
+    --border: 220 13% 46%;
+    --input: 220 13% 46%;
+    --ring: 0 100% 27%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    @apply bg-gradient-to-b from-background/0 via-background/60 to-background;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-slow {
+    transition: var(--transition-slow);
+  }
+
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .hover-scale {
+    @apply transition-smooth hover:scale-105;
+  }
+}
