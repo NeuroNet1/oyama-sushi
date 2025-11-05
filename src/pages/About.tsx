@@ -110,21 +110,21 @@ const About = () => {
       {/* Philosophy Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4 ">
             Our Culinary Philosophy
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
             The principles that guide every dish we create
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto ">
             {philosophy.map((item, index) => (
               <Card
                 key={index}
-                className="hover-lift animate-fade-in"
+                className="hover-lift animate-fade-in shadow-[0_10px_12px_rgba(0,0,0,0.1)]"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardContent className="pt-8 pb-8">
+                <CardContent className="pt-8 pb-8 ">
                   <div className="text-accent mb-4">{item.icon}</div>
                   <h3 className="text-2xl font-serif font-semibold mb-3">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
