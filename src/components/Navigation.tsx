@@ -22,7 +22,6 @@ export const Navigation = () => {
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/menu", label: "Menu" },
-    { path: "/reservations", label: "Reservations" },
   ];
 
   return (

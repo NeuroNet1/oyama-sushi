@@ -8,6 +8,7 @@ import { Search, Flame, Leaf, Star } from "lucide-react";
 import dishNigiri from "@/assets/dish-nigiri.jpg";
 import dishRoll from "@/assets/dish-roll.jpg";
 import dishRamen from "@/assets/dish-ramen.jpg";
+import restaurantInterior from "@/assets/restaurant-interior.jpg";
 
 const Menu = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -113,7 +114,9 @@ const Menu = () => {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary"
+      style={{ backgroundImage: `url(${restaurantInterior})` }}
+      >
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 animate-fade-in-up">
             Our Menu

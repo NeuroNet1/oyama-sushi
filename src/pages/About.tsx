@@ -61,7 +61,7 @@ const About = () => {
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
       <section
-        className="relative py-32 bg-cover bg-center"
+        className="relative py-32 bg-cover bg-center h-[620px]"
         style={{ backgroundImage: `url(${restaurantInterior})` }}
       >
         <div className="absolute inset-0 bg-black/50" />

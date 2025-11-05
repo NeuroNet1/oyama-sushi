@@ -107,7 +107,7 @@ const Home = () => {
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
           >
             <Link to="/reservations">Reserve Your Table</Link>
-          </Button>
+          </Button>  
         </div>
 
         <button
@@ -117,9 +117,11 @@ const Home = () => {
         >
           <ChevronDown size={32} />
         </button>
+        
       </section>
 
       {/* Value Proposition */}
+      
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1  md:grid-cols-3 gap-8 ">
@@ -137,7 +139,7 @@ const Home = () => {
                 </Card>
             ))}
           </div>
-        </div>
+        </div>  
       </section>
 
       {/* Featured Dishes */}
@@ -266,7 +268,17 @@ const Home = () => {
           </Button>
         </div>
       </section>
-
+      {/* WhatsApp Button */}
+      
+       <section>
+        
+        <a href="https://wa.me/12345678900?text=Hola" 
+        className="fixed bottom-10 right-10 w-[60px] h-[60px] bg-[#25D366] rounded-full 
+                   flex items-center justify-center z-[100] shadow-lg 
+                   animate-pulse-smooth hover:scale-110 transition-transform" target="_blank" rel="noopener noreferrer">
+            <img src={icon} alt="WhatsApp" width="50" height="50" />
+        </a>
+      </section>
 
       {/* Final CTA */}
       <section
@@ -294,6 +306,7 @@ const Home = () => {
           </p>
         </div>
       </section>
+      {/* End of Home Page */}
     </main>
   );
 };
