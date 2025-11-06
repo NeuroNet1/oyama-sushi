@@ -201,7 +201,72 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      {/*Map Section*/}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-serif font-bold mb-6 text-center">Find Us</h2>
+          <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              title="Oyama Sushi Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.6904473894847!2d-7.8091980000000005!3d53.728229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dd3bb80d0703d%3A0x23e3e44606dc3d44!2sOyama%20Sushi%20Japanese%20Restaurant!5e0!3m2!1sen!2sie!4v1730901234567!5m2!1sen!2sie"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            
+            {/* Info Card Overlay */}
+            <div className="absolute top-2 left-2 bg-background rounded-lg shadow-xl p-6 max-w-sm z-10">
+              <h3 className="text-2xl font-serif font-bold mb-2">Oyama Sushi Japanese Restaurant</h3>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span className="text-sm font-medium text-green-600">Open until 9:30PM</span>
+              </div>
+              
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div>
+                  <p className="font-medium">UNIT 1, GRAFTON COURT, Townparks,</p>
+                  <p className="font-medium">LONGFORD, N39 FA37</p>
+                  <p className="mt-1">
+                    Phone: <a href="tel:+353433340929" className="text-accent hover:underline">+353433340929</a>
+                  </p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Delivery Hours</p>
+                  <p>Monday - Thursday: 12PM - 9:30PM</p>
+                  <p>Friday - Saturday: 12PM - 10:30PM</p>
+                  <p>Sunday: 12PM - 9:30PM</p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Collection Hours</p>
+                  <p>Monday - Thursday: 10AM - 9:30PM</p>
+                  <p>Friday - Saturday: 10AM - 10:30PM</p>
+                  <p>Sunday: 10AM - 9:30PM</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3 mt-4">
+                <Button asChild className="flex-1 bg-accent hover:bg-accent/90">
+                  <Link to="/reservations">Book Now</Link>
+                </Button>
+                <Button asChild variant="outline" className="flex-1">
+                  <a 
+                    href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Get directions
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">

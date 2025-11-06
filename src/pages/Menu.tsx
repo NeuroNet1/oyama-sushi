@@ -132,87 +132,89 @@ const Menu = () => {
         <div className="container mx-auto px-4">
           {/* Search Bar */}
           <div className="max-w-md mx-auto mb-12">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
-              <Input
-                type="text"
-                placeholder="Search dishes..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
-              />
-            </div>
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
+          <Input
+            type="text"
+            placeholder="Search dishes..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10"
+          />
+        </div>
           </div>
 
           {/* Category Tabs */}
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
-              {categories.map((category) => (
-                <TabsTrigger key={category.value} value={category.value}>
-                  {category.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+        <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
+          {categories.map((category) => (
+            <TabsTrigger key={category.value} value={category.value}>
+          {category.label}
+            </TabsTrigger>
+          ))}
+        </TabsList>
 
-            <TabsContent value={activeCategory}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item, index) => (
-                  <Card
-                    key={index}
-                    className="overflow-hidden hover-lift animate-scale-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                      <div className="absolute top-2 right-2 flex gap-1">
-                        {item.tags.includes("chefs-pick") && (
-                          <Badge className="bg-gold text-gold-foreground">
-                            <Star className="w-3 h-3 mr-1" />
-                            Chef's Pick
-                          </Badge>
-                        )}
-                        {item.tags.includes("spicy") && (
-                          <Badge variant="destructive">
-                            <Flame className="w-3 h-3 mr-1" />
-                            Spicy
-                          </Badge>
-                        )}
-                        {item.tags.includes("vegetarian") && (
-                          <Badge variant="secondary">
-                            <Leaf className="w-3 h-3 mr-1" />
-                            Vegetarian
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
-                    <CardContent className="pt-4 pb-6">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
-                        <span className="text-lg font-semibold text-accent">{item.price}</span>
-                      </div>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+        <TabsContent value={activeCategory}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item, index) => (
+          <Card
+            key={index}
+            className="overflow-hidden hover-lift animate-scale-in"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <div className="relative h-48 overflow-hidden">
+              <img
+            src={item.image}
+            alt={item.name}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+              />
+              <div className="absolute top-2 right-2 flex gap-1">
+            {item.tags.includes("chefs-pick") && (
+              <Badge className="bg-gold text-gold-foreground">
+                <Star className="w-3 h-3 mr-1" />
+                Chef's Pick
+              </Badge>
+            )}
+            {item.tags.includes("spicy") && (
+              <Badge variant="destructive">
+                <Flame className="w-3 h-3 mr-1" />
+                Spicy
+              </Badge>
+            )}
+            {item.tags.includes("vegetarian") && (
+              <Badge variant="secondary">
+                <Leaf className="w-3 h-3 mr-1" />
+                Vegetarian
+              </Badge>
+            )}
               </div>
+            </div>
+            <CardContent className="pt-4 pb-6">
+              <div className="flex justify-between items-start mb-2">
+            <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
+            <span className="text-lg font-semibold text-accent">{item.price}</span>
+              </div>
+              <p className="text-muted-foreground text-sm">{item.description}</p>
+            </CardContent>
+          </Card>
+            ))}
+          </div>
 
-              {filteredItems.length === 0 && (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
-                </div>
-              )}
-            </TabsContent>
+          {filteredItems.length === 0 && (
+            <div className="text-center py-12">
+          <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
+            </div>
+          )}
+        </TabsContent>
           </Tabs>
 
           {/* Download Menu */}
           <div className="text-center mt-16">
-            <Button size="lg" variant="outline">
-              Download Full Menu (PDF)
-            </Button>
+        <a href="/Oyama_Sushi_Menu.pdf" download="Oyama_Sushi_Menu.pdf">
+          <Button size="lg" variant="outline">
+            Download Full Menu (PDF)
+          </Button>
+        </a>
           </div>
         </div>
       </section>
