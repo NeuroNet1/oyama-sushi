@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Reservations from "./pages/Reservations";
-import Test from "./pages/test";
 import NotFound from "./pages/NotFound";
 
 
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/reservations" element={<Reservations />} />
-          <Route path="/Test" element={<Test />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
