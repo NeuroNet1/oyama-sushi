@@ -5,18 +5,6 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
-@keyframes pulse-smooth {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-}
-
-.animate-pulse-smooth {
-  animation: pulse-smooth 2.5s infinite;
-}
 
 @layer base {
   :root {
@@ -44,6 +32,8 @@ All colors MUST be HSL.
 
     --gold: 45 82% 48%;
     --gold-foreground: 0 0% 10%;
+
+    --red-decoration: 0 70% 60%;
 
     --destructive: 0 100% 27%;
     --destructive-foreground: 240 100% 99%;
@@ -84,6 +74,8 @@ All colors MUST be HSL.
 
     --gold: 45 82% 48%;
     --gold-foreground: 0 0% 10%;
+
+    --red-decoration: 0 70% 60%;
 
     --destructive: 0 100% 27%;
     --destructive-foreground: 240 100% 99%;

@@ -11,7 +11,6 @@ import Menu from "./pages/Menu";
 import Reservations from "./pages/Reservations";
 import NotFound from "./pages/NotFound";
 
-
 const queryClient = new QueryClient();
 
 const App = () => (
