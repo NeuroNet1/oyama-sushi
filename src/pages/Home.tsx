@@ -3,12 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChefHat, Leaf, Sparkles, Star, ChevronDown } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
+import SnowfallZen from "@/components/SnowfallZen";
 import heroImage from "@/assets/hero-chef.jpg";
 import dishNigiri from "@/assets/dish-nigiri.jpg";
 import dishRoll from "@/assets/dish-roll.jpg";
 import dishRamen from "@/assets/dish-ramen.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import icon from "@/assets/whatapp.png";
+
 
 const Home = () => {
   const scrollToContent = () => {
@@ -71,6 +73,8 @@ const Home = () => {
 
   return (
     <main className="min-h-screen">
+      <SnowfallZen />
+     
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
