@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { KanjiDecoration } from "@/components/KanjiDecoration";
 
 const Reservations = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -80,6 +81,7 @@ const Reservations = () => {
 
   return (
     <main className="min-h-screen pt-20 bg-secondary">
+       <KanjiDecoration />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-5xl md:text-6xl font-serif font-bold text-center mb-4 animate-fade-in-up">
           Reserve Your Table

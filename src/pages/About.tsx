@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { KanjiDecoration } from "@/components/KanjiDecoration";
 import chefPortrait from "@/assets/chef-portrait.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import { Award, Heart, Users, Leaf } from "lucide-react";
@@ -61,7 +62,7 @@ const About = () => {
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
       <section
-        className="relative py-32 bg-cover bg-center h-[620px]"
+        className="relative py-32 bg-cover bg-center"
         style={{ backgroundImage: `url(${restaurantInterior})` }}
       >
         <div className="absolute inset-0 bg-black/50" />
@@ -76,8 +77,9 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <KanjiDecoration />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-serif font-bold mb-6 text-center">
               A Legacy Born from Tradition
@@ -108,20 +110,21 @@ const About = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4 ">
+      <section className="py-20 bg-secondary relative">
+        <KanjiDecoration />
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
             Our Culinary Philosophy
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
             The principles that guide every dish we create
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {philosophy.map((item, index) => (
               <Card
                 key={index}
-                className="hover-lift animate-fade-in shadow-[0_10px_12px_rgba(0,0,0,0.1)]"
+                className="hover-lift animate-fade-in shadow-lg z-10"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <CardContent className="pt-8 pb-8 ">
@@ -136,8 +139,9 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <KanjiDecoration />
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
             Meet Our Master Chefs
           </h2>
@@ -174,8 +178,9 @@ const About = () => {
       </section>
 
       {/* Ingredients Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-secondary relative">
+        <KanjiDecoration />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-serif font-bold mb-6">Premium Ingredients</h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -201,10 +206,11 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/*Map Section*/}
+ {/*Map Section*/}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-serif font-bold mb-6 text-center">Find Us</h2>
+          
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               title="Oyama Sushi Location"
@@ -268,8 +274,9 @@ const About = () => {
         </div>
       </section>  
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 relative">
+        <KanjiDecoration />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-serif font-bold mb-6">Experience Our Craft</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join us for an unforgettable culinary journey guided by our master chefs

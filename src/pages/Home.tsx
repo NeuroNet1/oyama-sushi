@@ -280,10 +280,10 @@ const Home = () => {
       </section>  
 
 
-      {/* Testimonials */}
-      <section className="py-20 relative">
+  {/* Testimonials */}
+  <section className="py-16 relative">
         <KanjiDecoration />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-10 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
             What Our Guests Say
           </h2>
@@ -291,7 +291,7 @@ const Home = () => {
             Experiences that speak for themselves
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-10">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <CardContent className="pt-6">
@@ -307,22 +307,25 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
- {/* WhatsApp Section */}
+      {/* WhatsApp Section as Card */}
       <section className="py-12 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Have Questions? Reach Out on WhatsApp!
-          </h2>
-          <p className="text-lg text-muted-foreground mb-6">
-            Our team is ready to assist you with reservations, menu inquiries, and special requests.
-          </p>
-          <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6">
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <img src={icon} alt="WhatsApp" className="inline-block w-7 h-7 mr-1" />
-              Chat with Us on WhatsApp
-            </a>
-          </Button>
+        <div className="container mx-auto px-4 flex justify-center">
+          <div className="max-w-md w-full">
+            <div className="bg-background rounded-lg shadow-xl p-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+                Have Questions? Reach Out on WhatsApp!
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Our team is ready to assist you with reservations, menu inquiries, and special requests.
+              </p>
+              <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6">
+                <a href="https://wa.me/12345678900?text=Hola" target="_blank" rel="noopener noreferrer">
+                  <img src={icon} alt="WhatsApp" className="inline-block w-7 h-7 mr-2 align-middle" />
+                  Chat with Us on WhatsApp
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
         {/* WhatsApp Button */}
@@ -359,7 +362,9 @@ const Home = () => {
             PM - 10:00 PM
           </p>
         </div>
+        
       </section>
+    </section>
     </main>
   );
 };
