@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoImage from "../assets/oyama.png";
 
 // Lantern SVG
 const Lantern = ({ position }: { position: "top-left" | "bottom-right" }) => (
@@ -99,15 +100,24 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-8 absolute left-0 md:left-4">
             <Link
               to="/"
-              className="text-3xl font-bold tracking-tight mr-4"
-              style={{
-                fontFamily: "'Arial', 'Brush Script Std', cursive",
-                color: "#e6be9a",
-                textShadow: "0 2px 8px #8b181d88",
-                letterSpacing: "0.04em",
-              }}
+              className="flex items-center gap-3"
             >
-              Oyama Sushi
+              <img 
+                src={logoImage} 
+                alt="Oyama Sushi Logo" 
+                className="h-[140px] w-[140px] object-contain"
+              />
+              <span
+                className="text-3xl font-bold tracking-tight"
+                style={{
+                  fontFamily: "'Arial', 'Brush Script Std', cursive",
+                  color: "#e6be9a",
+                  textShadow: "0 2px 8px #8b181d88",
+                  letterSpacing: "0.04em",
+                }}
+              >
+                Oyama Sushi
+              </span>
             </Link>
             {navLinks.slice(1, 3).map((link) => (
               <Link
