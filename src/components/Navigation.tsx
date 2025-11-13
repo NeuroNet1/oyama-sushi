@@ -48,6 +48,11 @@ const SnowflakeOverlay = () => (
             filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.08))",
           }}
         >
+          <path
+            d="M12 2L13.09 8.26L19 7.27L14.18 12L19 16.73L13.09 15.74L12 22L10.91 15.74L5 16.73L9.82 12L5 7.27L10.91 8.26L12 2Z"
+            fill="white"
+            opacity="0.8"
+          />
         </svg>
       );
     })}
@@ -90,9 +95,21 @@ export const Navigation = () => {
       <SnowflakeOverlay />
       <div className="container mx-auto px-4 relative">
         <div className="flex items-center justify-between h-20 relative">
-          {/* Enlaces a la izquierda */}
+          {/* Logo y enlaces a la izquierda */}
           <div className="hidden md:flex items-center gap-8 absolute left-0 md:left-4">
-            {navLinks.slice(0, 3).map((link) => (
+            <Link
+              to="/"
+              className="text-3xl font-bold tracking-tight mr-4"
+              style={{
+                fontFamily: "'Arial', 'Brush Script Std', cursive",
+                color: "#e6be9a",
+                textShadow: "0 2px 8px #8b181d88",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Oyama Sushi
+            </Link>
+            {navLinks.slice(1, 3).map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -108,19 +125,6 @@ export const Navigation = () => {
               </Link>
             ))}
           </div>
-          {/* Logo centrado */}
-          <Link
-            to="/"
-            className="text-3xl font-bold tracking-tight mx-auto"
-            style={{
-              fontFamily: "'Brush Script MT', 'Brush Script Std', cursive",
-              color: "#e6be9a",
-              textShadow: "0 2px 8px #8b181d88",
-              letterSpacing: "0.04em",
-            }}
-          >
-            Oyama Sushi
-          </Link>
           {/* Reservations a la derecha */}
           <div className="hidden md:flex items-center gap-8 absolute right-0 md:right-4">
             <Link
@@ -161,12 +165,12 @@ export const Navigation = () => {
               </Link>
             ))}
             <Link
-              to="/christmas-specials"
+              to="/reservations"
               className="block w-full mt-2 px-4 py-2 rounded-lg font-semibold text-[#8b181d] bg-[#e6be9a] shadow hover:bg-[#8b181d] hover:text-[#e6be9a] transition-colors"
               style={{ boxShadow: "0 2px 8px #e6be9a44", transition: "all 0.2s" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Christmas Specials 🎄
+              Reservations 🎄
             </Link>
           </div>
         )}
