@@ -220,20 +220,83 @@ const Menu = () => {
       {/* Signature Section */}
       <section className="py-20 bg-secondary relative">
         <KanjiDecoration />
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-serif font-bold mb-6">Signature Omakase Experience</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let our master chefs guide you through an unforgettable multi-course tasting menu,
-            featuring the finest seasonal ingredients prepared with traditional techniques.
-          </p>
-          <p className="text-3xl font-bold text-accent mb-6">$120 per person</p>
-          <p className="text-sm text-muted-foreground mb-8">
-            Reservations required 24 hours in advance
-          </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90">
-            Reserve Omakase Experience
-          </Button>
-        </div>
+              <div className="container mx-auto px-4 relative z-10">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-10">
+                  Chef's Specials
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {/* Special 1 */}
+                  <Card className="overflow-hidden animate-fade-in-up">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={dishNigiri}
+                        alt="Omakase Experience"
+                        className="w-full h-full object-cover"
+                      />
+                      <Badge className="absolute top-2 left-2 bg-gold text-gold-foreground">
+                        <Star className="w-3 h-3 mr-1" />
+                        Omakase
+                      </Badge>
+                    </div>
+                    <CardContent className="pt-4 pb-6">
+                      <h3 className="text-xl font-serif font-semibold mb-2">
+                        Omakase Experience
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-2">
+                        A curated tasting journey of the chef’s finest seasonal creations.
+                      </p>
+                      <span className="text-lg font-semibold text-accent">$65</span>
+                    </CardContent>
+                  </Card>
+                  {/* Special 2 */}
+                  <Card className="overflow-hidden animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={dishRoll}
+                        alt="Truffle Salmon Roll"
+                        className="w-full h-full object-cover"
+                      />
+                      <Badge variant="secondary" className="absolute top-2 left-2">
+                        <Leaf className="w-3 h-3 mr-1" />
+                        Limited
+                      </Badge>
+                    </div>
+                    <CardContent className="pt-4 pb-6">
+                      <h3 className="text-xl font-serif font-semibold mb-2">
+                        Truffle Salmon Roll
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-2">
+                        Salmon, avocado, cucumber, truffle oil, and crispy shallots.
+                      </p>
+                      <span className="text-lg font-semibold text-accent">$22</span>
+                    </CardContent>
+                  </Card>
+                  {/* Special 3 */}
+                  <Card className="overflow-hidden animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={dishRamen}
+                        alt="Wagyu Ramen"
+                        className="w-full h-full object-cover"
+                      />
+                      <Badge variant="destructive" className="absolute top-2 left-2">
+                        <Flame className="w-3 h-3 mr-1" />
+                        Spicy
+                      </Badge>
+                    </div>
+                    <CardContent className="pt-4 pb-6">
+                      <h3 className="text-xl font-serif font-semibold mb-2">
+                        Wagyu Ramen
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-2">
+                        Rich broth, premium Wagyu slices, soft egg, and house chili oil.
+                      </p>
+                      <span className="text-lg font-semibold text-accent">$28</span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+          
       </section>
     </main>
   );
