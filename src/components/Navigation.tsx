@@ -83,7 +83,7 @@ export const Navigation = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-visible rounded-b-2xl shadow-lg",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-visible  shadow-lg",
         isScrolled
           ? "bg-gradient-to-r from-[#1d351d] to-[#325632] backdrop-blur-md"
           : "bg-gradient-to-r from-[#1d351d] to-[#325632]"
@@ -93,20 +93,15 @@ export const Navigation = () => {
   {/* Lantern decor only left */}
   <Lantern position="top-left" />
       {/* Snowflake Overlay */}
-      <SnowflakeOverlay />
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto  relative">
         <div className="flex items-center justify-between h-20 relative">
-          {/* Logo y enlaces a la izquierda */}
-          <div className="hidden md:flex items-center gap-8 absolute left-0 md:left-4">
+          {/* Logo centrado */}
+          <div className="hidden md:flex  absolute left-1/2 transform -translate-x-1/2">
             <Link
               to="/"
               className="flex items-center gap-3"
             >
-              <img 
-                src={logoImage} 
-                alt="Oyama Sushi Logo" 
-                className="h-[140px] w-[140px] object-contain"
-              />
+             
               <span
                 className="text-3xl font-bold tracking-tight"
                 style={{
@@ -119,6 +114,14 @@ export const Navigation = () => {
                 Oyama Sushi
               </span>
             </Link>
+          </div>
+          {/* Enlaces a la izquierda */}
+          <div className="hidden md:flex items-center gap-1 absolute left-0 md:left-4">
+             <img 
+                src={logoImage} 
+                alt="Oyama Sushi Logo" 
+                className="flex left-0 w-[140px] object-contain"
+              />
             {navLinks.slice(1, 3).map((link) => (
               <Link
                 key={link.path}

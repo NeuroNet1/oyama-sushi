@@ -84,6 +84,7 @@ export const Footer = () => {
             <p className="opacity-90">Mon-Thu: 10AM - 9:30PM</p>
             <p className="opacity-90">Fri-Sat: 10AM - 10:30PM</p>
             <p className="opacity-90">Sun: 10AM - 9:30PM</p>
+            
           </div>
               </li>
             </ul>

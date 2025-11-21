@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card"; 
 import { ChefHat, Leaf, Sparkles, Star, ChevronDown } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
 import SnowfallZen from "@/components/SnowfallZen";
-import heroImage from "@/assets/hero-chef.jpg";
-import dishNigiri from "@/assets/dish-nigiri.jpg";
-import dishRoll from "@/assets/dish-roll.jpg";
-import dishRamen from "@/assets/dish-ramen.jpg";
-import restaurantInterior from "@/assets/restaurant-interior.jpg";
-import icon from "@/assets/whatapp.png";
+import assets from "@/assets";
 
 
 const Home = () => {
@@ -37,17 +32,17 @@ const Home = () => {
 
   const featuredDishes = [
     {
-      image: dishNigiri,
+      image: assets.dishNigiri,
       name: "Premium Nigiri Selection",
       description: "Fresh salmon, tuna, and yellowtail",
     },
     {
-      image: dishRoll,
+      image:  assets.dishRoll,
       name: "Signature Oyama Roll",
       description: "Salmon, avocado, cream cheese",
     },
     {
-      image: dishRamen,
+      image: assets.dishRamen,
       name: "Traditional Ramen",
       description: "Rich broth, perfect noodles",
     },
@@ -79,7 +74,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${assets.heroChef})` }}
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -206,7 +201,7 @@ const Home = () => {
             </div>
             <div className="order-1 md:order-2">
               <img
-                src={restaurantInterior}
+                src={assets.restaurantInterior}
                 alt="Oyama Sushi Interior"
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
@@ -223,7 +218,7 @@ const Home = () => {
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               title="Oyama Sushi Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.6904473894847!2d-7.8091980000000005!3d53.728229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dd3bb80d0703d%3A0x23e3e44606dc3d44!2sOyama%20Sushi%20Japanese%20Restaurant!5e0!3m2!1sen!2sie!4v1730901234567!5m2!1sen!2sie"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d905.7028431232048!2d-7.800109117361626!3d53.72822401717568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dd300233d51b3%3A0xf07a39540758dfba!2sOyama%20Sushi%20Japanese%20Restaurant!5e0!3m2!1ses-419!2sco!4v1763670982535!5m2!1ses-419!2sco"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -323,8 +318,8 @@ const Home = () => {
                 Our team is ready to assist you with reservations, menu inquiries, and special requests.
               </p>
               <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6">
-                <a href="https://wa.me/12345678900?text=Hola" target="_blank" rel="noopener noreferrer">
-                  <img src={icon} alt="WhatsApp" className="inline-block w-7 h-7 mr-2 align-middle" />
+                <a href="https://wa.me/3203867953?text=Hola" target="_blank" rel="noopener noreferrer">
+                  <img src={assets.whatapp} alt="WhatsApp" className="inline-block w-7 h-7 mr-2 align-middle" />
                   Chat with Us on WhatsApp
                 </a>
               </Button>
@@ -334,17 +329,17 @@ const Home = () => {
       </section>
         {/* WhatsApp Button */}
        <section>
-        <a href="https://wa.me/12345678900?text=Hola" 
+        <a href="https://wa.me/+573203867953?text=Hola" 
         className="fixed bottom-10 right-10 w-[60px] h-[60px] bg-[#25D366] rounded-full 
                    flex items-center justify-center z-[100] shadow-lg 
                    animate-pulse-smooth hover:scale-110 transition-transform" target="_blank" rel="noopener noreferrer">
-            <img src={icon} alt="WhatsApp" width="50" height="50" />
+            <img src={assets.whatapp} alt="WhatsApp" width="50" height="50" />
         </a>
       </section>
       {/* Final CTA */}
       <section
         className="py-32 relative bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${assets.heroChef})` }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 text-center text-white px-4">

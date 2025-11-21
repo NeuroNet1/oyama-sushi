@@ -137,48 +137,8 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="py-20 relative">
-        <KanjiDecoration />
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
-            Meet Our Master Chefs
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            The artisans behind your unforgettable experience
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {chefs.map((chef, index) => (
-              <Card
-                key={index}
-                className="text-center hover-lift animate-scale-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <CardContent className="pt-8 pb-8">
-                  <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden">
-                    <img
-                      src={chef.image}
-                      alt={chef.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-serif font-semibold mb-2">{chef.name}</h3>
-                  <p className="text-accent font-medium mb-2">{chef.title}</p>
-                  <p className="text-sm text-muted-foreground mb-1">
-                    {chef.experience} experience
-                  </p>
-                  <p className="text-sm text-muted-foreground italic">{chef.specialty}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Ingredients Section */}
-      <section className="py-20 bg-secondary relative">
+      <section className="py-20  relative">
         <KanjiDecoration />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -207,14 +167,14 @@ const About = () => {
         </div>
       </section>
  {/*Map Section*/}
-      <section className="py-20">
+      <section className="py-20 bg-secondary" >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-serif font-bold mb-6 text-center">Find Us</h2>
           
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               title="Oyama Sushi Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.6904473894847!2d-7.8091980000000005!3d53.728229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dd3bb80d0703d%3A0x23e3e44606dc3d44!2sOyama%20Sushi%20Japanese%20Restaurant!5e0!3m2!1sen!2sie!4v1730901234567!5m2!1sen!2sie"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d905.7028431232048!2d-7.800109117361626!3d53.72822401717568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485dd300233d51b3%3A0xf07a39540758dfba!2sOyama%20Sushi%20Japanese%20Restaurant!5e0!3m2!1ses-419!2sco!4v1763670982535!5m2!1ses-419!2sco"
               width="100%"
               height="100%"
               style={{ border: 0 }}

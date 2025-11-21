@@ -6,105 +6,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Search, Flame, Leaf, Star } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
-import dishNigiri from "@/assets/dish-nigiri.jpg";
-import dishRoll from "@/assets/dish-roll.jpg";
-import dishRamen from "@/assets/dish-ramen.jpg";
-
+import {menuItems,categories} from "../../public/Starters/Menu";
+import Assets from "@/assets/index";
+import logo from "../assets/Download.svg"
 const Menu = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const menuItems = [
-    {
-      category: "sushi",
-      name: "Premium Nigiri Set",
-      description: "Salmon, tuna, yellowtail, and eel (8 pieces)",
-      price: "$32",
-      image: dishNigiri,
-      tags: ["chefs-pick"],
-    },
-    {
-      category: "sushi",
-      name: "Sashimi Deluxe",
-      description: "Chef's selection of the freshest catches",
-      price: "$42",
-      image: dishNigiri,
-      tags: ["chefs-pick", "premium"],
-    },
-    {
-      category: "rolls",
-      name: "Oyama Signature Roll",
-      description: "Salmon, avocado, cream cheese, topped with spicy mayo",
-      price: "$16",
-      image: dishRoll,
-      tags: ["spicy", "chefs-pick"],
-    },
-    {
-      category: "rolls",
-      name: "Dragon Roll",
-      description: "Shrimp tempura, cucumber, topped with eel and avocado",
-      price: "$18",
-      image: dishRoll,
-      tags: ["premium"],
-    },
-    {
-      category: "rolls",
-      name: "Rainbow Roll",
-      description: "California roll topped with assorted fresh fish",
-      price: "$17",
-      image: dishRoll,
-      tags: [],
-    },
-    {
-      category: "rolls",
-      name: "Spicy Tuna Roll",
-      description: "Fresh tuna with spicy sauce and cucumber",
-      price: "$14",
-      image: dishRoll,
-      tags: ["spicy"],
-    },
-    {
-      category: "hot",
-      name: "Traditional Ramen",
-      description: "Rich pork broth, chashu, soft egg, scallions",
-      price: "$16",
-      image: dishRamen,
-      tags: ["chefs-pick"],
-    },
-    {
-      category: "hot",
-      name: "Chicken Teriyaki",
-      description: "Grilled chicken with house teriyaki sauce",
-      price: "$18",
-      image: dishRamen,
-      tags: [],
-    },
-    {
-      category: "hot",
-      name: "Tempura Combination",
-      description: "Shrimp and vegetable tempura with dipping sauce",
-      price: "$15",
-      image: dishRamen,
-      tags: [],
-    },
-    {
-      category: "hot",
-      name: "Vegetable Udon",
-      description: "Thick noodles in savory broth with seasonal vegetables",
-      price: "$14",
-      image: dishRamen,
-      tags: ["vegetarian"],
-    },
-  ];
-
-  const categories = [
-    { value: "all", label: "All" },
-    { value: "sushi", label: "Sushi & Sashimi" },
-    { value: "rolls", label: "Signature Rolls" },
-    { value: "hot", label: "Hot Dishes" },
-  ];
-
+  const [searchQuery, setSearchQuery] = useState(""); 
   const [activeCategory, setActiveCategory] = useState("all");
-
+  const [showMore, setShowMore] = useState(false);
   const filteredItems = menuItems.filter((item) => {
     const matchesCategory = activeCategory === "all" || item.category === activeCategory;
     const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -143,70 +51,81 @@ const Menu = () => {
               />
             </div>
           </div>
-
-          {/* Category Tabs */}
-          <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
+            {/* Category Tabs */}
+            <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-5 mb-12">
               {categories.map((category) => (
-                <TabsTrigger key={category.value} value={category.value}>
-                  {category.label}
-                </TabsTrigger>
+              <TabsTrigger key={category.value} value={category.value}>
+                {category.label}
+              </TabsTrigger>
               ))}
-            </TabsList>
-
+            </TabsList>              
             <TabsContent value={activeCategory}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item, index) => (
-                  <Card
-                    key={index}
-                    className="overflow-hidden hover-lift animate-scale-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                      <div className="absolute top-2 right-2 flex gap-1">
-                        {item.tags.includes("chefs-pick") && (
-                          <Badge className="bg-gold text-gold-foreground">
-                            <Star className="w-3 h-3 mr-1" />
-                            Chef's Pick
-                          </Badge>
-                        )}
-                        {item.tags.includes("spicy") && (
-                          <Badge variant="destructive">
-                            <Flame className="w-3 h-3 mr-1" />
-                            Spicy
-                          </Badge>
-                        )}
-                        {item.tags.includes("vegetarian") && (
-                          <Badge variant="secondary">
-                            <Leaf className="w-3 h-3 mr-1" />
-                            Vegetarian
-                          </Badge>
-                        )}
-                      </div>
-                    </div>
-                    <CardContent className="pt-4 pb-6">
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
-                        <span className="text-lg font-semibold text-accent">{item.price}</span>
-                      </div>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+              {filteredItems.slice(0, showMore ? filteredItems.length : 6).map((item, index) => (
+                <Card
+                key={index}
+                className="overflow-hidden hover-lift animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                  src={item.image}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute top-2 right-2 flex gap-1">
+                  {item.tags.includes("chefs-pick") && (
+                    <Badge className="bg-gold text-gold-foreground">
+                    <Star className="w-3 h-3 mr-1" />
+                    Chef's Pick
+                    </Badge>
+                  )}
+                  {item.tags.includes("spicy") && (
+                    <Badge variant="destructive">
+                    <Flame className="w-3 h-3 mr-1" />
+                    Spicy
+                    </Badge>
+                  )}
+                  {item.tags.includes("vegetarian") && (
+                    <Badge variant="secondary">
+                    <Leaf className="w-3 h-3 mr-1" />
+                    Vegetarian
+                    </Badge>
+                  )}
+                  </div>
+                </div>
+                  <CardContent className="pt-4 pb-6 bg-transparent">
+                  <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
+                  <span className="text-lg font-semibold text-accent">{item.price}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <p className="color-red ">Allergens [{item.allergens.join(",")}]</p>
+                </CardContent>
+
+                </Card>
+              ))}
               </div>
 
+              {filteredItems.length > 6 && (
+              <div className="text-center mt-8">
+                <Button 
+                onClick={() => setShowMore(!showMore)}
+                variant="outline"
+                size="lg"
+                >
+                {showMore ? "Mostrar Menos" : "Mostrar Más"}
+                </Button>
+              </div>
+              )}
+
               {filteredItems.length === 0 && (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
-                </div>
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
+              </div>
               )}
             </TabsContent>
-          </Tabs>
+            </Tabs>
 
           {/* Download Menu */}
           <div className="text-center mt-16">
@@ -229,7 +148,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-gold bg-white/90 hover:scale-105 transition-transform duration-300">
           <div className="relative h-52 overflow-hidden">
             <img
-          src={dishNigiri}
+          src={Assets.dishNigiri}
           alt="Omakase Experience"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -254,7 +173,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-green-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.1s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={dishRoll}
+          src={Assets.dishRoll}
           alt="Truffle Salmon Roll"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -279,7 +198,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-red-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.2s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={dishRamen}
+          src={Assets.dishRamen}
           alt="Wagyu Ramen"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
