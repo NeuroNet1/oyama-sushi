@@ -1,6 +1,7 @@
 import Img from "./Starter.ts";
 import Ramenimg from "../Ramen/Ramen.ts";
 import HotDishesImg from "../Hot_dishes/Dishes.ts";
+import SushiImg from "../Sushi/Sushi.ts"
 export const categories = [
         { value: "all", label: "All" },
         { value: "Starter", label: "Starters" },
@@ -512,5 +513,280 @@ export const categories = [
     image: HotDishesImg.bento1,
     tags: [],
     allergens: [6, 8, 14, 16],
+  },
+  //Sushi and Sashimi
+  {
+    category: "sushi",
+    name: "Salmon Sashimi",
+    description: "(4 pcs)",
+    price: "€8.90",
+    image: SushiImg.Salmon,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "sushi",
+    name: "Tuna Sashimi",
+    description: "(4 pcs)",
+    price: "€9.30",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "sushi",
+    name: "Salmon and Tuna Sashimi",
+    description: "(4 pcs)",
+    price: "€9.30",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  // --- NIGIRI ---
+
+  {
+    category: "Nigiri",
+    name: "Avocado Nigiri",
+    description: "(2 pcs)",
+    price: "€3.99",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: []
+  },
+  {
+    category: "Nigiri",
+    name: "Cucumber Nigiri",
+    description: "(2 pcs)",
+    price: "€3.99",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [14]
+  },
+  {
+    category: "Nigiri",
+    name: "Inari Fried Tofu",
+    description: "(2 pcs)",
+    price: "€3.99",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [1, 6]
+  },
+  {
+    category: "Nigiri",
+    name: "Seaweed Gunkan",
+    description: "(2 pcs)",
+    price: "€4.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [6, 8]
+  },
+  {
+    category: "Nigiri",
+    name: "Crab Stick Gunkan",
+    description: "(2 pcs)",
+    price: "€4.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7, 10]
+  },
+  {
+    category: "Nigiri",
+    name: "Aburi Salmon Nigiri",
+    description: "(2 pcs)",
+    price: "€4.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [3, 7]
+  },
+  {
+    category: "Nigiri",
+    name: "Sake Salmon Nigiri",
+    description: "(2 pcs)",
+    price: "€4.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "Nigiri",
+    name: "Ebi Prawn Nigiri",
+    description: "(2 pcs)",
+    price: "€4.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [10]
+  },
+  {
+    category: "Nigiri",
+    name: "Maguro Tuna Nigiri",
+    description: "(2 pcs)",
+    price: "€5.80",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "Nigiri",
+    name: "Unagi Eel Nigiri",
+    description: "(2 pcs)",
+    price: "€5.80",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [1, 6, 7]
+  },
+  // --- rolls ---
+  {
+    category: "rolls",
+    name: "Cucumber Roll",
+    description: "(8 pcs)",
+    price: "€5.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [14]
+  },
+  {
+    category: "rolls",
+    name: "Avocado Roll",
+    description: "(8 pcs)",
+    price: "€5.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [14]
+  },
+  {
+    category: "rolls",
+    name: "Crab Stick Roll",
+    description: "(8 pcs)",
+    price: "€6.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "rolls",
+    name: "Salmon Roll",
+    description: "(8 pcs)",
+    price: "€6.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "rolls",
+    name: "Spicy Salmon Roll",
+    description: "(8 pcs)",
+    price: "€7.30",
+    image: SushiImg.Sushi,
+    tags: ["spicy"],
+    allergens: [7]
+  },
+  {
+    category: "rolls",
+    name: "Tuna Roll",
+    description: "(8 pcs)",
+    price: "€6.90",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7]
+  },
+  {
+    category: "rolls",
+    name: "Spicy Tuna Roll",
+    description: "(8 pcs)",
+    price: "€7.30",
+    image: SushiImg.Sushi,
+    tags: ["spicy"],
+    allergens: [6, 7]
+  },
+  // --- sushi classic ---
+  {
+    category: "sushi",
+    name: "Vegan Roll",
+    description: "(8 pcs)",
+    price: "€9.10",
+    image: SushiImg.Sushi,
+    tags: ["vegan"],
+    allergens: [1, 8, 14]
+  },
+  {
+    category: "sushi",
+    name: "Avocado Cheese Roll",
+    description: "(8 pcs)",
+    price: "€9.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [3, 8, 14]
+  },
+  {
+    category: "sushi",
+    name: "Chicken Roll",
+    description: "(8 pcs)",
+    price: "€10.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [8, 14]
+  },
+  {
+    category: "sushi",
+    name: "California Roll",
+    description: "(8 pcs)",
+    price: "€10.50",
+    image: SushiImg.Sushi,
+    tags: ["popular"],
+    allergens: [7, 10, 14]
+  },
+  {
+    category: "sushi",
+    name: "Alaska Roll",
+    description: "(8 pcs)",
+    price: "€10.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7, 8, 14]
+  },
+  {
+    category: "sushi",
+    name: "Philadelphia Roll",
+    description: "(8 pcs)",
+    price: "€10.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [3, 7, 8, 14]
+  },
+  {
+    category: "sushi",
+    name: "Ebi Tempura Roll",
+    description: "(8 pcs)",
+    price: "€10.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [1, 10, 14, 15]
+  },
+  {
+    category: "sushi",
+    name: "Eel Roll",
+    description: "(8 pcs)",
+    price: "€11.60",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7, 8, 14]
+  },
+  {
+    category: "sushi",
+    name: "Tuna Medium Roll",
+    description: "(8 pcs)",
+    price: "€11.60",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: [7, 14]
+  },
+  {
+    category: "sushi",
+    name: "Chumaki Hand Roll",
+    description: "1 hand roll cone",
+    price: "€9.50",
+    image: SushiImg.Sushi,
+    tags: [],
+    allergens: []
   }
     ]; 
