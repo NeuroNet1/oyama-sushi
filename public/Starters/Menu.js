@@ -8,6 +8,7 @@ export const categories = [
         { value: "hot", label: "Hot Dishes" },
         { value: "sushi", label: "Sushi & Sashimi" },
         { value: "rolls", label: "Signature Rolls" },
+        { value: "Nigiri", label: "Nigiri" },
         
        
       ];
@@ -529,7 +530,7 @@ export const categories = [
     name: "Tuna Sashimi",
     description: "(4 pcs)",
     price: "€9.30",
-    image: SushiImg.Sushi,
+    image: SushiImg.Tuna,
     tags: [],
     allergens: [7]
   },
@@ -538,7 +539,7 @@ export const categories = [
     name: "Salmon and Tuna Sashimi",
     description: "(4 pcs)",
     price: "€9.30",
-    image: SushiImg.Sushi,
+    image: SushiImg.SashimiMix,
     tags: [],
     allergens: [7]
   },
@@ -549,7 +550,7 @@ export const categories = [
     name: "Avocado Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.Sushi,
+    image: SushiImg.Aguacate,
     tags: [],
     allergens: []
   },
@@ -558,7 +559,7 @@ export const categories = [
     name: "Cucumber Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.Sushi,
+    image: SushiImg.pepino,
     tags: [],
     allergens: [14]
   },
@@ -567,7 +568,7 @@ export const categories = [
     name: "Inari Fried Tofu",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.Sushi,
+    image: SushiImg.tofu,
     tags: [],
     allergens: [1, 6]
   },
@@ -576,7 +577,7 @@ export const categories = [
     name: "Seaweed Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.mar,
     tags: [],
     allergens: [6, 8]
   },
@@ -585,7 +586,7 @@ export const categories = [
     name: "Crab Stick Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.cangrejo,
     tags: [],
     allergens: [7, 10]
   },
