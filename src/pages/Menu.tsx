@@ -53,7 +53,7 @@ const Menu = () => {
           </div>
             {/* Category Tabs */}
             <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-5 mb-12">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-6 mb-12">
               {categories.map((category) => (
               <TabsTrigger key={category.value} value={category.value}>
                 {category.label}

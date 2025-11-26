@@ -7,8 +7,9 @@ export const categories = [
         { value: "Starter", label: "Starters" },
         { value: "hot", label: "Hot Dishes" },
         { value: "sushi", label: "Sushi & Sashimi" },
-        { value: "rolls", label: "Signature Rolls" },
         { value: "Nigiri", label: "Nigiri" },
+        { value: "rolls", label: "Signature Rolls" },
+      
         
        
       ];
