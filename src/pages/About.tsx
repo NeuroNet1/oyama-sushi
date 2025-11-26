@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
 import chefPortrait from "@/assets/chef-portrait.jpg";
-import restaurantInterior from "@/assets/restaurant-interior.jpg";
+import assets from "@/assets/index.tsx";
 import { Award, Heart, Users, Leaf } from "lucide-react";
 
 const About = () => {
@@ -63,7 +63,7 @@ const About = () => {
       {/* Hero Section */}
       <section
         className="relative py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${restaurantInterior})` }}
+        style={{ backgroundImage: assets.restaurantInterior ? `url(${assets.restaurantInterior})` : "none" }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">

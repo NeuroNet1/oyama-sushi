@@ -596,7 +596,7 @@ export const categories = [
     name: "Aburi Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.SalmonRaw,  
     tags: [],
     allergens: [3, 7]
   },
@@ -605,7 +605,7 @@ export const categories = [
     name: "Sake Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.SalmonRaw,
     tags: [],
     allergens: [7]
   },
@@ -614,7 +614,7 @@ export const categories = [
     name: "Ebi Prawn Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.Gamba,
     tags: [],
     allergens: [10]
   },
@@ -623,7 +623,7 @@ export const categories = [
     name: "Maguro Tuna Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.Sushi,
+    image: SushiImg.tunamaguro,
     tags: [],
     allergens: [7]
   },
@@ -632,7 +632,7 @@ export const categories = [
     name: "Unagi Eel Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.Sushi,
+    image: SushiImg.anguila,
     tags: [],
     allergens: [1, 6, 7]
   },
@@ -642,7 +642,7 @@ export const categories = [
     name: "Cucumber Roll",
     description: "(8 pcs)",
     price: "€5.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.Rpepino,
     tags: [],
     allergens: [14]
   },
@@ -651,7 +651,7 @@ export const categories = [
     name: "Avocado Roll",
     description: "(8 pcs)",
     price: "€5.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.RAguacate,
     tags: [],
     allergens: [14]
   },
@@ -660,7 +660,7 @@ export const categories = [
     name: "Crab Stick Roll",
     description: "(8 pcs)",
     price: "€6.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.RCangrejo,
     tags: [],
     allergens: [7]
   },
@@ -669,7 +669,7 @@ export const categories = [
     name: "Salmon Roll",
     description: "(8 pcs)",
     price: "€6.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.RSalmon,
     tags: [],
     allergens: [7]
   },
@@ -678,7 +678,7 @@ export const categories = [
     name: "Spicy Salmon Roll",
     description: "(8 pcs)",
     price: "€7.30",
-    image: SushiImg.Sushi,
+    image: SushiImg.RSalmon,
     tags: ["spicy"],
     allergens: [7]
   },
@@ -687,7 +687,7 @@ export const categories = [
     name: "Tuna Roll",
     description: "(8 pcs)",
     price: "€6.90",
-    image: SushiImg.Sushi,
+    image: SushiImg.RAtun,
     tags: [],
     allergens: [7]
   },
@@ -696,7 +696,7 @@ export const categories = [
     name: "Spicy Tuna Roll",
     description: "(8 pcs)",
     price: "€7.30",
-    image: SushiImg.Sushi,
+    image: SushiImg.RAtun,
     tags: ["spicy"],
     allergens: [6, 7]
   },
@@ -706,7 +706,7 @@ export const categories = [
     name: "Vegan Roll",
     description: "(8 pcs)",
     price: "€9.10",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuVegano,
     tags: ["vegan"],
     allergens: [1, 8, 14]
   },
@@ -715,7 +715,7 @@ export const categories = [
     name: "Avocado Cheese Roll",
     description: "(8 pcs)",
     price: "€9.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuAguacate,
     tags: [],
     allergens: [3, 8, 14]
   },

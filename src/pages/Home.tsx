@@ -72,70 +72,71 @@ const Home = () => {
      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${assets.heroChef})` }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src={assets.heroChef} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 text-center text-white px-4 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-balance">
-            Authentic Japanese Excellence
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light text-balance">
-            Experience the art of sushi crafted by master chefs with over 10 years of tradition
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
-          >
-            <Link to="/reservations">Reserve Your Table</Link>
-          </Button>
-        </div>
-
-        <button
-          onClick={scrollToContent}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce cursor-pointer"
-          aria-label="Scroll down"
+      <div className="relative z-10 text-center text-white px-4 animate-fade-in-up">
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-balance">
+        Authentic Japanese Excellence
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light text-balance">
+        Experience the art of sushi crafted by master chefs with over 10 years of tradition
+        </p>
+        <Button
+        asChild
+        size="lg"
+        className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
         >
-          <ChevronDown size={32} />
-        </button>
+        <Link to="/reservations">Reserve Your Table</Link>
+        </Button>
+      </div>
+      
+      <button
+        onClick={scrollToContent}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce cursor-pointer"
+        aria-label="Scroll down"
+      >
+        <ChevronDown size={32} />
+      </button>
       </section>
 
       {/* Value Proposition */}
       <section className="py-20 bg-secondary relative">
-        <KanjiDecoration />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {valuePillars.map((pillar, index) => (
-              <Card
-                key={index}
-                className="text-center hover-lift animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <CardContent className="pt-8 pb-8">
-                  <div className="flex justify-center mb-4 text-accent">{pillar.icon}</div>
-                  <h3 className="text-xl font-serif font-semibold mb-2">{pillar.title}</h3>
-                  <p className="text-muted-foreground">{pillar.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <KanjiDecoration />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {valuePillars.map((pillar, index) => (
+          <Card
+          key={index}
+          className="text-center hover-lift animate-fade-in"
+          style={{ animationDelay: `${index * 0.2}s` }}
+          >
+          <CardContent className="pt-8 pb-8">
+            <div className="flex justify-center mb-4 text-accent">{pillar.icon}</div>
+            <h3 className="text-xl font-serif font-semibold mb-2">{pillar.title}</h3>
+            <p className="text-muted-foreground">{pillar.description}</p>
+          </CardContent>
+          </Card>
+        ))}
         </div>
+      </div>
       </section>
+      
 
       {/* Featured Dishes */}
       <section className="py-20 relative">
-        <KanjiDecoration />
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">
-            Featured Dishes
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Discover our most beloved creations
-          </p>
+      <KanjiDecoration />
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">Featured Dishes</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredDishes.map((dish, index) => (
@@ -339,7 +340,7 @@ const Home = () => {
       {/* Final CTA */}
       <section
         className="py-32 relative bg-cover bg-center"
-        style={{ backgroundImage: `url(${assets.heroChef})` }}
+        style={{ backgroundImage: `url(${assets.chef})` }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 text-center text-white px-4">
