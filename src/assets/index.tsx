@@ -18,7 +18,7 @@ import chefPortrait from "./chef-portrait.jpg";
 import dishNigiri from "./dish-nigiri.jpg";
 import dishRamen from "./dish-ramen.jpg";
 import dishRoll from "./dish-roll.jpg";
-import heroChef from "./hero-chef.mov";
+import heroChef from "./hero-chef.mp4";
 import oyama from "./oyama.png";
 import restaurantInterior from "./restaurant-interior.webp";
 import chef from "./hero-chef.jpg";
