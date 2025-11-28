@@ -59,69 +59,71 @@ const Menu = () => {
                 {category.label}
               </TabsTrigger>
               ))}
-            </TabsList>              
+            </TabsList>  
+                        
             <TabsContent value={activeCategory}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
               {filteredItems.slice(0, showMore ? filteredItems.length : 10).map((item, index) => (
-                <Card
-                key={index}
-                className="overflow-hidden hover-lift animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                  src={item.image}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute top-2 right-2 flex gap-1">
-                  {item.tags.includes("chefs-pick") && (
-                    <Badge className="bg-gold text-gold-foreground">
-                    <Star className="w-3 h-3 mr-1" />
-                    Chef's Pick
-                    </Badge>
-                  )}
-                  {item.tags.includes("spicy") && (
-                    <Badge variant="destructive">
-                    <Flame className="w-3 h-3 mr-1" />
-                    Spicy
-                    </Badge>
-                  )}
-                  {item.tags.includes("vegetarian") && (
-                    <Badge variant="secondary">
-                    <Leaf className="w-3 h-3 mr-1" />
-                    Vegetarian
-                    </Badge>
-                  )}
-                  </div>
+              <Card
+              key={index}
+              className="overflow-hidden hover-lift animate-scale-in cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=ie.flipdish.br3339', '_blank')}
+              >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                src={item.image}
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute top-2 right-2 flex gap-1">
+                {item.tags.includes("chefs-pick") && (
+                <Badge className="bg-gold text-gold-foreground">
+                <Star className="w-3 h-3 mr-1" />
+                Chef's Pick
+                </Badge>
+                )}
+                {item.tags.includes("spicy") && (
+                <Badge variant="destructive">
+                <Flame className="w-3 h-3 mr-1" />
+                Spicy
+                </Badge>
+                )}
+                {item.tags.includes("vegetarian") && (
+                <Badge variant="secondary">
+                <Leaf className="w-3 h-3 mr-1" />
+                Vegetarian
+                </Badge>
+                )}
                 </div>
-                  <CardContent className="pt-4 pb-6 bg-transparent">
-                  <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
-                  <span className="text-lg font-semibold text-accent">{item.price}</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
-                  <p className="color-red ">Allergens [{item.allergens.join(",")}]</p>
-                </CardContent>
+              </div>
+                <CardContent className="pt-4 pb-6 bg-transparent">
+                <div className="flex justify-between items-start mb-2">
+                <h3 className="text-xl font-serif font-semibold">{item.name}</h3>
+                <span className="text-lg font-semibold text-accent">{item.price}</span>
+                </div>
+                <p className="text-muted-foreground text-sm">{item.description}</p>
+                <p className="color-red ">Allergens [{item.allergens.join(",")}]</p>
+              </CardContent>
 
-                </Card>
+              </Card>
               ))}
               </div>
 
               {filteredItems.length > 10 && (
               <div className="text-center mt-8">
-                <Button 
-                onClick={() => setShowMore(!showMore)}
-                variant="outline"
-                size="lg"
-                >
-                {showMore ? "Mostrar Menos" : "Mostrar Más"}
-                </Button>
+              <Button 
+              onClick={() => setShowMore(!showMore)}
+              variant="outline"
+              size="lg"
+              >
+              {showMore ? "Mostrar Menos" : "Mostrar Más"}
+              </Button>
               </div>
               )}
 
               {filteredItems.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
+              <p className="text-muted-foreground text-lg">No dishes found matching your search.</p>
               </div>
               )}
             </TabsContent>
@@ -148,7 +150,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-gold bg-white/90 hover:scale-105 transition-transform duration-300">
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.dishNigiri}
+          src={Assets.RamenPollo}
           alt="Omakase Experience"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -173,7 +175,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-green-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.1s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.dishRoll}
+          src={Assets.FutaMar2}
           alt="Truffle Salmon Roll"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -198,7 +200,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-red-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.2s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.dishRamen}
+          src={Assets.RamenPollo}
           alt="Wagyu Ramen"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />

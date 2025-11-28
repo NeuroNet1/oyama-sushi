@@ -34,10 +34,29 @@ const Reservations = () => {
   };
 
   const handleNext = () => {
+    // Validación por paso
+    if (currentStep === 1 && !formData.groupSize) {
+      toast({ title: "Please select a group size.", variant: "destructive" });
+      return;
+    }
+    if (currentStep === 2 && !formData.date) {
+      toast({ title: "Please select a date.", variant: "destructive" });
+      return;
+    }
+    if (currentStep === 3 && !formData.time) {
+      toast({ title: "Please select a time.", variant: "destructive" });
+      return;
+    }
+    if (currentStep === 4) {
+      if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
+        toast({ title: "Please fill in all personal information.", variant: "destructive" });
+        return;
+      }
+    }
     if (currentStep < totalSteps) {
       setCurrentStep((prev) => prev + 1);
     }
-  };
+  }
 
   const handleBack = () => {
     if (currentStep > 1) {
@@ -45,12 +64,23 @@ const Reservations = () => {
     }
   };
 
-  const handleSubmit = () => {
-    toast({
-      title: "Reservation Confirmed!",
-      description: "We've sent a confirmation email to " + formData.email,
+ const handleSubmit = async () => {
+  // Validación final antes de enviar
+  if (!formData.groupSize || !formData.date || !formData.time || !formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
+    toast({ title: "Please complete all required fields before submitting.", variant: "destructive" });
+    return;
+  }
+  try {
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx_3ZcspQHwuY_iDRpBtNXMJQPRtqsmWcp1Mnj3YtKoSQKL4_q19Z8mxhff9rGaxwbb/exec";
+
+    await fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(formData),
     });
-    // Reset form
+
+    toast({ title: "Reservation submitted successfully!", description: "We've received your reservation." });
+
+    setCurrentStep(1);
     setFormData({
       groupSize: "",
       date: "",
@@ -62,10 +92,14 @@ const Reservations = () => {
       occasion: "",
       specialRequests: "",
     });
-    setCurrentStep(1);
-  };
 
-  const groupSizes = ["1-2 people", "3-4 people", "5-6 people", "7+ people (Private Event)"];
+  } catch (error) {
+    console.error("Error submitting reservation:", error);
+    toast({ title: "There was an error sending your reservation.", variant: "destructive" });
+  }
+};
+
+  const groupSizes = ["1-2 people", "3-4 people", "5-6 people", "7+ people"];
   const timeSlots = [
     "5:00 PM",
     "5:30 PM",
@@ -79,6 +113,7 @@ const Reservations = () => {
   ];
   const occasions = ["Birthday", "Anniversary", "Business Dinner", "Special Celebration", "Just Dining"];
 
+  
   return (
     <main className="min-h-screen pt-20 bg-secondary">
        <KanjiDecoration />
@@ -120,6 +155,7 @@ const Reservations = () => {
                       variant={formData.groupSize === size ? "default" : "outline"}
                       className="h-20 text-lg"
                       onClick={() => setFormData((prev) => ({ ...prev, groupSize: size }))}
+                      aria-required="true"
                     >
                       {size}
                     </Button>
@@ -137,8 +173,13 @@ const Reservations = () => {
                     name="date"
                     value={formData.date}
                     onChange={handleInputChange}
-                    min={new Date().toISOString().split("T")[0]}
+                    min={(() => {
+                      const tomorrow = new Date();
+                      tomorrow.setDate(tomorrow.getDate() + 1);
+                      return tomorrow.toISOString().split("T")[0];
+                    })()}
                     className="text-lg h-12"
+                    required
                   />
                 </div>
               )}
@@ -152,6 +193,7 @@ const Reservations = () => {
                       variant={formData.time === time ? "default" : "outline"}
                       className="h-16"
                       onClick={() => setFormData((prev) => ({ ...prev, time }))}
+                      aria-required="true"
                     >
                       {time}
                     </Button>
@@ -172,6 +214,7 @@ const Reservations = () => {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         className="h-12"
+                        required
                       />
                     </div>
                     <div>
@@ -183,6 +226,7 @@ const Reservations = () => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         className="h-12"
+                        required
                       />
                     </div>
                   </div>
@@ -195,6 +239,7 @@ const Reservations = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="h-12"
+                      required
                     />
                   </div>
                   <div>
@@ -206,6 +251,7 @@ const Reservations = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="h-12"
+                      required
                     />
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card"; 
 import { ChefHat, Leaf, Sparkles, Star, ChevronDown } from "lucide-react";
-import { KanjiDecoration } from "@/components/KanjiDecoration";
+import { KanjiDecoration } from "@/components/KanjiDecoration"; 
 import SnowfallZen from "@/components/SnowfallZen";
 import assets from "@/assets";
 
@@ -32,19 +32,19 @@ const Home = () => {
 
   const featuredDishes = [
     {
-      image: assets.dishNigiri,
-      name: "Premium Nigiri Selection",
-      description: "Fresh salmon, tuna, and yellowtail",
+      image: assets.RamenPollo,
+      name: "Chicken Miso Ramen",
+      description: "Grilled Chicken Fillets, Bean Sprout, Served in a Miso & Chicken and Pork Flavoured Soup",
     },
     {
-      image:  assets.dishRoll,
-      name: "Signature Oyama Roll",
-      description: "Salmon, avocado, cream cheese",
+      image:  assets.FutaMar2,
+      name: "Seafood Futomaki Roll",
+      description: "Salmon, Tuna, Prawn, Crab Stick top Masago (4 Pieces)",
     },
     {
-      image: assets.dishRamen,
-      name: "Traditional Ramen",
-      description: "Rich broth, perfect noodles",
+      image: assets.SuAlaska,
+      name: "SUSHI ALASKA",
+      description: "delicious in (8 pcs)",
     },
   ];
 
@@ -142,8 +142,9 @@ const Home = () => {
             {featuredDishes.map((dish, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg aspect-square animate-scale-in"
+                className="group relative overflow-hidden rounded-lg aspect-square animate-scale-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.15}s` }}
+                onClick={() => window.location.href = "/menu"}
               >
                 <img
                   src={dish.image}
@@ -227,6 +228,7 @@ const Home = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+              
             
             {/* Info Card Overlay */}
             <div className="absolute top-2 left-2 bg-background rounded-lg shadow-xl p-6 max-w-sm z-10">
@@ -278,7 +280,49 @@ const Home = () => {
           </div>
         </div>
       </section>  
+        {/* Gif Car */}
+       <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
+      
+      {/* Imagen */}
+      <div
+        className="w-full md:w-1/3 h-48 md:h-40 rounded-xl bg-cover bg-center shadow-md"
+       
+      >
+        <img src={assets.foto} alt="" />
+      </div>
 
+      {/* Texto */}
+      <div className="flex-1">
+        <span className="text-red-600 font-bold tracking-wide text-sm">
+          🎄✨ Christmas at Glow
+        </span>
+
+        <h1 className="text-2xl font-bold text-gray-900 mt-2">
+          Surprise your loved ones with our{" "}
+          <span className="text-red-700">Christmas Edition Gift Card</span>
+        </h1>
+
+        <p className="text-gray-700 mt-3">
+          The perfect way to let them choose their favorite fragrance or any
+          premium product from our store. Elegant, fast and beautifully
+          presented — ideal for memorable Christmas gifts.
+        </p>
+
+        {/* Botones */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-6">
+          <a
+            href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-xl shadow-lg transition"
+          >
+            🎁 Visit our store & get yours today
+          </a>
+
+          <span className="text-yellow-600 font-bold sm:ml-auto">
+            Give quality. Give style. Give Glow. ✨
+          </span>
+        </div>
+      </div>
+    </div>
 
   {/* Testimonials */}
   <section className="py-16 relative">
