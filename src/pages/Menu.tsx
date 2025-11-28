@@ -53,13 +53,17 @@ const Menu = () => {
           </div>
             {/* Category Tabs */}
             <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="grid w-full max-w-6xl mx-auto grid-cols-8 mb-10">
+            <TabsList className="grid w-full max-w-6xl mx-auto grid-cols-2 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-8 mb-10 overflow-y-auto">
               {categories.map((category) => (
-              <TabsTrigger key={category.value} value={category.value}>
-                {category.label}
+              <TabsTrigger 
+              key={category.value} 
+              value={category.value}
+              className="whitespace-nowrap text-xs sm:text-sm"
+              >
+              {category.label}
               </TabsTrigger>
               ))}
-            </TabsList>  
+            </TabsList>
                         
             <TabsContent value={activeCategory}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
@@ -68,7 +72,6 @@ const Menu = () => {
               key={index}
               className="overflow-hidden hover-lift animate-scale-in cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => window.open('https://play.google.com/store/apps/details?id=ie.flipdish.br3339', '_blank')}
               >
               <div className="relative h-48 overflow-hidden">
                 <img
