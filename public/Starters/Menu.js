@@ -2,12 +2,15 @@ import Img from "./Starter.ts";
 import Ramenimg from "../Ramen/Ramen.ts";
 import HotDishesImg from "../Hot_dishes/Dishes.ts";
 import SushiImg from "../Sushi/Sushi.ts"
+import Futa from "../Futomaki/Futamaki.ts";
 export const categories = [
         { value: "all", label: "All" },
         { value: "Starter", label: "Starters" },
         { value: "hot", label: "Hot Dishes" },
         { value: "sushi", label: "Sushi & Sashimi" },
+        { value: "ramen", label: "Ramen" },
         { value: "Nigiri", label: "Nigiri" },
+        { value: "Futomaki", label: "Futomaki" },
         { value: "rolls", label: "Signature Rolls" },
       
         
@@ -157,7 +160,7 @@ export const categories = [
       name: "Oyama Special Ramen",
       description: "Tonkotsu Soup, Pork Char Siu, Braised Beef, King Prawn, Pak Choi, Seasoned Egg, Fungus, Spring Onion, Grilled Seaweed, Deep Fried Onion, Bean Sprout, Bamboo Shoots and Coriander",
       price: "€14.90",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenOyama,
       tags: ["spicy"],
       allergens: [1,6,8,10,16],
     },
@@ -167,7 +170,7 @@ export const categories = [
       name: "Tonkotsu Pork Ramen",
       description: "Tonkotsu Soup, Pork Char Siu, Pak Choi, Bamboo Shoots, Fungus, Seasoned Egg, Spring Onion, Coriander, Narutomaki, Deep Fried Onion, Grilled Seaweed, Bean Sprout",
       price: "€13.90",
-      image:  Ramenimg.ramen,
+      image:  Ramenimg.RamenCerdo,
       tags: ["spicy"],
       allergens: [1,6,8,16],
     },
@@ -176,7 +179,7 @@ export const categories = [
       name: "Tonkotsu Beef Ramen",
       description: "Home Made Braised Beef, Pak Choi, Spring Onion, Bamboo Shoots, Fungus, Grilled Seaweed, Bean Sprout, Coriander, Deep Fried Onion, Narutomaki and Seasoned Egg",
       price: "€13.90",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenRes,
       tags: ["spicy"],
       allergens: [1,6,8,16],
     },
@@ -185,7 +188,7 @@ export const categories = [
       name: "Chicken Miso Ramen",
       description: "Grilled Chicken Fillets, Pak Choi, Spring Onion, Bamboo Shoots, Seasoned Egg, Grilled Seaweed, Fungus, Deep Fried Onion, Bean Sprout, Served in a Miso & Chicken and Pork Flavoured Soup",
       price: "€13.50",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenPollo,
       tags: ["spicy"],
       allergens: [1,6,8,16],
     },
@@ -194,7 +197,7 @@ export const categories = [
       name: "Vegan Ramen",
       description: "Grilled Tofu, Shiitake Mushroom, Pak Choi, Bamboo Shoots, Sweet Corn, Spring Onion, Fungus, Coriander, Grilled Seaweed and Bean Sprout, Served in a Miso Flavoured Soup",
       price: "€12.90",
-      image:  Ramenimg.ramen,
+      image:  Ramenimg.RamenVegano,
       tags: ["vegetarian"],
       allergens: [1,6,14],
     },
@@ -203,7 +206,7 @@ export const categories = [
       name: "Seafood Ramen",
       description: "Ramen Noodles Topped with Tiger Prawns, Grilled Tuna, Squid, Mussels, Narutomaki, Salmon and Coriander. Served in a Miso Soup with Seaweed Menma and Spring Onion",
       price: "€15.50",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenRes,
       tags: ["spicy"],
       allergens: [1,6,7,10,12],
     },
@@ -212,7 +215,7 @@ export const categories = [
       name: "Kimchi Chicken Ramen",
       description: "Ramen Noodles Served in Spicy Chicken & Pork Broth, Topped with Chicken Breast, Bean Sprout, Bamboo Shoots, Pak Choi, Seasoned Egg, Fungus, Spring Onion, Bean Sprout, Coriander and Grilled Seaweed",
       price: "€14.90",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenRes,
       tags: ["spicy"],
       allergens: [1,6,8,11,16],
     },
@@ -221,7 +224,7 @@ export const categories = [
       name: "Salmon Miso Ramen",
       description: "Ramen Noodles Served in Chicken Miso Flavoured Broth, Topped with Grilled Salmon, Seasonal Vegetables, Fungus, Spring Onion, Grilled Onion, Bean Sprout and Grilled Seaweed",
       price: "€14.90",
-      image: Ramenimg.ramen,
+      image: Ramenimg.RamenVegano,
       tags: ["spicy"],
       allergens: [3,6,7],
       
@@ -243,7 +246,7 @@ export const categories = [
     description:
       "Grilled Chicken Breast on Top of Noodles Mixed with Vegetables. Garnished with Roasted Seaweed, Spring Onion, Fried Onion & Coriander with Teriyaki and Curry Oil",
     price: "€13.90",
-    image: HotDishesImg.Pasta,
+    image: HotDishesImg.Pasta2,
     tags: [],
     allergens: [1, 6],
   },
@@ -253,7 +256,7 @@ export const categories = [
     description:
       "Stir-fried Egg Noodles with Crispy Tofu, Vegetables, Onions, Spring Onion, Sweet Pepper, Roasted Seaweed, Fried Onion",
     price: "€12.00",
-    image: HotDishesImg.Pasta,
+    image: HotDishesImg.Pasta3,
     tags: ["vegetarian"],
     allergens: [1, 6, 8, 10, 16],
   },
@@ -724,7 +727,7 @@ export const categories = [
     name: "Chicken Roll",
     description: "(8 pcs)",
     price: "€10.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuPollo,
     tags: [],
     allergens: [8, 14]
   },
@@ -733,7 +736,7 @@ export const categories = [
     name: "California Roll",
     description: "(8 pcs)",
     price: "€10.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuCalifornia  ,
     tags: ["popular"],
     allergens: [7, 10, 14]
   },
@@ -742,7 +745,7 @@ export const categories = [
     name: "Alaska Roll",
     description: "(8 pcs)",
     price: "€10.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuAlaska,
     tags: [],
     allergens: [7, 8, 14]
   },
@@ -751,7 +754,7 @@ export const categories = [
     name: "Philadelphia Roll",
     description: "(8 pcs)",
     price: "€10.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuFiladelfia,
     tags: [],
     allergens: [3, 7, 8, 14]
   },
@@ -760,7 +763,7 @@ export const categories = [
     name: "Ebi Tempura Roll",
     description: "(8 pcs)",
     price: "€10.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuTempura,
     tags: [],
     allergens: [1, 10, 14, 15]
   },
@@ -769,7 +772,7 @@ export const categories = [
     name: "Eel Roll",
     description: "(8 pcs)",
     price: "€11.60",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuAnguila,
     tags: [],
     allergens: [7, 8, 14]
   },
@@ -778,7 +781,7 @@ export const categories = [
     name: "Tuna Medium Roll",
     description: "(8 pcs)",
     price: "€11.60",
-    image: SushiImg.Sushi,
+    image: SushiImg.SuAtun,
     tags: [],
     allergens: [7, 14]
   },
@@ -787,8 +790,135 @@ export const categories = [
     name: "Chumaki Hand Roll",
     description: "1 hand roll cone",
     price: "€9.50",
-    image: SushiImg.Sushi,
+    image: SushiImg.NigiSolo,
     tags: [],
     allergens: []
-  }
+  },
+  // --- FUTOMAKI ---
+  {
+  category: "Futomaki",
+  name: "Vegan Futomaki  (8 Pieces)",
+  description: "Avocado, Cucumber, Tofu, Veg Salad Top Sesame Seeds",
+  price: "€8.90",
+  image: Futa.FutaVegan,
+  tags: [],
+  allergens: [8,14]
+},
+{
+  category: "Futomaki",
+  name: "Vegan Futomaki  (8 Pieces)",
+  description: "Avocado, Cucumber, Tofu, Veg Salad Top Sesame Seeds",
+  price: "€15.90",
+  image: Futa.FutaVegan,
+  tags: [],
+  allergens: [8,14]
+},
+
+{
+  category: "Futomaki",
+  name: "Special Tempura Seafood Futomaki (4 Pieces)",
+  description: "Crab Stick, Avocado, Salmon Top Masago and Ewo Sauce",
+  price: "€9.50",
+  image: Futa.FutaMar,
+  tags: [],
+  allergens: [6,7,14,15]
+},
+{
+  category: "Futomaki",
+  name: "Special Tempura Seafood Futomaki (8 Pieces)",
+  description: "Crab Stick, Avocado, Salmon Top Masago and Ewo Sauce",
+  price: "€16.80",
+  image: Futa.FutaMar,
+  tags: [],
+  allergens: [6,7,14,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Dragon Roll (8 Pieces)",
+  description: "Prawn Tempura top Avocado Sesame Seeds and Spicy Sauce",
+  price: "€16.80",
+  image: Futa.FutaDragon,
+  tags: [],
+  allergens: [1,6,7,8,10,14]
+},
+
+{
+  category: "Futomaki",
+  name: "Seafood Futomaki (4 Pieces)",
+  description: "Salmon, Tuna, Prawn, Crab Stick top Masago",
+  price: "€9.50",
+  image: Futa.FutaMar2,
+  tags: [],
+  allergens: [7,10,15]
+},
+{
+  category: "Futomaki",
+  name: "Seafood Futomaki (8 Pieces)",
+  description: "Salmon, Tuna, Prawn, Crab Stick top Masago",
+  price: "€16.80",
+  image: Futa.FutaMar2,
+  tags: [],
+  allergens: [7,10,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Tiger Roll (8 Pieces)",
+  description: "Prawn Tempura top Eel, Avocado, Sesame Seeds with Eel Sauce ",
+  price: "€16.80",
+  image: Futa.FutaTiger,
+  tags: [],
+  allergens: [1,6,7,8,10,14]
+},
+
+{
+  category: "Futomaki",
+  name: "Rainbow Futomaki (8 Pieces)",
+  description: "Prawn Tempura top Salmon, Tuna, Ebi Prawn, Avocado, Masago and Spicy Sauce",
+  price: "€17.80",
+  image: Futa.FutaRainbow,
+  tags: [],
+  allergens: [1,6,7,10,14,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Salmon Futomaki (8 Pieces)",
+  description: "Salmon, Wrap Sushi with Crab Stick and Cucumber",
+  price: "€16.80",
+  image: Futa.FutaSalmon,
+  tags: [],
+  allergens: [1,6,7,10,14,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Spider Futomaki (8 Pieces)",
+  description: "Soft Shell Crab Tempura with Avocado",
+  price: "€16.80",
+  image: Futa.FutaAraña,
+  tags: [],
+  allergens: [1,6,7,10,14,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Duck Futomaki (8 Pieces)",
+  description: "Crispy Duck, Vegetable Salad with Teriyaki Sauce",
+  price: "€16.80",
+  image: Futa.FutaMar2,
+  tags: [],
+  allergens: [1,6,7,10,14,15]
+},
+
+{
+  category: "Futomaki",
+  name: "Spicy Futomaki",
+  description: "Choice of Salmon or Tuna with Avocado, Cucumber and Cheese",
+  price: "€16.80",
+  image: Futa.FutaDragon,
+  tags: [],
+  allergens: [1,6,7,10,14,15]
+}
     ]; 

@@ -53,7 +53,7 @@ const Menu = () => {
           </div>
             {/* Category Tabs */}
             <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-6 mb-12">
+            <TabsList className="grid w-full max-w-6xl mx-auto grid-cols-8 mb-10">
               {categories.map((category) => (
               <TabsTrigger key={category.value} value={category.value}>
                 {category.label}
@@ -61,8 +61,8 @@ const Menu = () => {
               ))}
             </TabsList>              
             <TabsContent value={activeCategory}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredItems.slice(0, showMore ? filteredItems.length : 6).map((item, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+              {filteredItems.slice(0, showMore ? filteredItems.length : 10).map((item, index) => (
                 <Card
                 key={index}
                 className="overflow-hidden hover-lift animate-scale-in"
@@ -107,7 +107,7 @@ const Menu = () => {
               ))}
               </div>
 
-              {filteredItems.length > 6 && (
+              {filteredItems.length > 10 && (
               <div className="text-center mt-8">
                 <Button 
                 onClick={() => setShowMore(!showMore)}
