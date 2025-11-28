@@ -12,9 +12,6 @@ export const categories = [
         { value: "Nigiri", label: "Nigiri" },
         { value: "Futomaki", label: "Futomaki" },
         { value: "rolls", label: "Signature Rolls" },
-      
-        
-       
       ];
       
   export const menuItems = [
