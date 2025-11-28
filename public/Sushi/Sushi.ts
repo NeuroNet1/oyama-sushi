@@ -1,46 +1,48 @@
-const Salmon = "../Sushi/Salmon.webp";
-const Tuna = "../Sushi/Tuna.webp";
-const SashimiMix = "../Sushi/SashimiMix.webp";
-const Aguacate = "../Sushi/NigiAguacate.webp";
-const pepino ="../Sushi/NigiPepino.webp";
-const tofu = "../Sushi/NigiTofu.webp";
-const mar = "../Sushi/NigiMar.webp";
-const cangrejo = "../Sushi/NigiCangrejo.webp";
-const SalmonRaw = "../Sushi/NigiSalmon.webp";
-const Gamba = "../Sushi/NigiGamba.webp";
-const tunamaguro = "../Sushi/NigiTuna.webp";
-const anguila = "../Sushi/NigiAnguila.webp";
+const Salmon = "./Salmon.webp";
+const Tuna = "./Tuna.webp";
+const SashimiMix = "./SashimiMix.webp";
+//Nigiris
+const NigiAguacate = "./NigiAguacate.webp";
+const NigiAnguila = "./NigiAnguila.webp";
+const NigiCangrejo = "./NigiCangrejo.webp";
+const NigiGamba = "./NigiGamba.webp";
+const NigiMar = "./NigiMar.webp";
+const NigiPepino ="./NigiPepino.webp";
+const NigiSalmon = "./NigiSalmon.webp";
+const NigiSolo = "./NigiSolo.webp";
+const NigiTuna = "./NigiTuna.webp";
+const NigiTofu = "./NigiTofu.webp";
 //Rolls
-const Rpepino = "../Sushi/RollPepino.webp";
-const RAguacate = "../Sushi/RollAguacate.webp";
-const RCangrejo = "../Sushi/RollCangrejo.webp";
-const RSalmon = "../Sushi/RollSalmon.webp";
-const RAtun = "../Sushi/RollAtun.webp";
+const Rpepino = "./RollPepino.webp";
+const RAguacate = "./RollAguacate.webp";
+const RCangrejo = "./RollCangrejo.webp";
+const RSalmon = "./RollSalmon.webp";
+const RAtun = "./RollAtun.webp";
 //Sushi
-const SuVegano = "../Sushi/SuVegano.webp";
-const SuAguacate = "../Sushi/SuAguacate.webp";
-const SuPollo = "../Sushi/SuPollo.webp";
-const SuAlaska = "../Sushi/SuAlaska.webp";
-const SuCalifornia = "../Sushi/SuCalifornia.webp";
-const SuFiladelfia = "../Sushi/SuFiladelfia.webp";
-const SuTempura = "../Sushi/SuTempura.webp";
-const SuAnguila = "../Sushi/SuAnguila.webp";
-const SuAtun = "../Sushi/SuAtun.webp";
-const NigiSolo = "../Sushi/NigiSolo.webp";
+const SuVegano = "./SuVegano.webp";
+const SuAguacate = "./SuAguacate.webp";
+const SuPollo = "./SuPollo.webp";
+const SuAlaska = "./SuAlaska.webp";
+const SuCalifornia = "./SuCalifornia.webp";
+const SuFiladelfia = "./SuFiladelfia.webp";
+const SuTempura = "./SuTempura.webp";
+const SuAnguila = "./SuAnguila.webp";
+const SuAtun = "./SuAtun.webp";
 export default {
 
     Salmon,
     Tuna,
     SashimiMix,
-    Aguacate,
-    pepino,
-    tofu,
-    mar,
-    cangrejo,
-    SalmonRaw,
-    Gamba,
-    tunamaguro,
-    anguila,
+    //Nigiris
+    NigiAguacate,
+    NigiPepino,
+    NigiTofu,
+    NigiMar,
+    NigiCangrejo,
+    NigiSalmon,
+    NigiGamba,
+    NigiTuna,
+    NigiAnguila,
     //Rolls
     Rpepino,
     RAguacate,

@@ -551,7 +551,7 @@ export const categories = [
     name: "Avocado Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.Aguacate,
+    image: SushiImg.NigiAguacate,
     tags: [],
     allergens: []
   },
@@ -560,7 +560,7 @@ export const categories = [
     name: "Cucumber Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.pepino,
+    image: SushiImg.NigiPepino,
     tags: [],
     allergens: [14]
   },
@@ -569,7 +569,7 @@ export const categories = [
     name: "Inari Fried Tofu",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.tofu,
+    image: SushiImg.NigiTofu,
     tags: [],
     allergens: [1, 6]
   },
@@ -578,7 +578,7 @@ export const categories = [
     name: "Seaweed Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.mar,
+    image: SushiImg.NigiMar,
     tags: [],
     allergens: [6, 8]
   },
@@ -587,7 +587,7 @@ export const categories = [
     name: "Crab Stick Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.cangrejo,
+    image: SushiImg.NigiCangrejo,
     tags: [],
     allergens: [7, 10]
   },
@@ -596,7 +596,7 @@ export const categories = [
     name: "Aburi Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.SalmonRaw,  
+    image: SushiImg.NigiSalmon, 
     tags: [],
     allergens: [3, 7]
   },
@@ -605,7 +605,7 @@ export const categories = [
     name: "Sake Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.SalmonRaw,
+    image: SushiImg.NigiSalmon,
     tags: [],
     allergens: [7]
   },
@@ -614,7 +614,7 @@ export const categories = [
     name: "Ebi Prawn Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.Gamba,
+    image: SushiImg.NigiGamba,
     tags: [],
     allergens: [10]
   },
@@ -623,7 +623,7 @@ export const categories = [
     name: "Maguro Tuna Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.tunamaguro,
+    image: SushiImg.NigiTuna,
     tags: [],
     allergens: [7]
   },
@@ -632,7 +632,7 @@ export const categories = [
     name: "Unagi Eel Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.anguila,
+    image: SushiImg.NigiAnguila,
     tags: [],
     allergens: [1, 6, 7]
   },
