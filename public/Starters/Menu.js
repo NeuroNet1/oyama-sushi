@@ -3,6 +3,8 @@ import Ramenimg from "../Ramen/Ramen.ts";
 import HotDishesImg from "../Hot_dishes/Dishes.ts";
 import SushiImg from "../Sushi/Sushi.ts"
 import Futa from "../Futomaki/Futamaki.ts";
+import NIgi from "../Nigiri/Nigi.ts";
+import Nigi from "../Nigiri/Nigi.ts";
 export const categories = [
         { value: "all", label: "All" },
         { value: "Starter", label: "Starters" },
@@ -551,7 +553,7 @@ export const categories = [
     name: "Avocado Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.NigiAguacate,
+    image: Nigi.NigiAguacate,
     tags: [],
     allergens: []
   },
@@ -560,7 +562,7 @@ export const categories = [
     name: "Cucumber Nigiri",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.NigiPepino,
+    image: Nigi.NigiPepino,
     tags: [],
     allergens: [14]
   },
@@ -569,7 +571,7 @@ export const categories = [
     name: "Inari Fried Tofu",
     description: "(2 pcs)",
     price: "€3.99",
-    image: SushiImg.NigiTofu,
+    image: Nigi.NigiTofu,
     tags: [],
     allergens: [1, 6]
   },
@@ -578,7 +580,7 @@ export const categories = [
     name: "Seaweed Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.NigiMar,
+    image: Nigi.NigiMar,
     tags: [],
     allergens: [6, 8]
   },
@@ -587,7 +589,7 @@ export const categories = [
     name: "Crab Stick Gunkan",
     description: "(2 pcs)",
     price: "€4.50",
-    image: SushiImg.NigiCangrejo,
+    image: Nigi.NigiCangrejo,
     tags: [],
     allergens: [7, 10]
   },
@@ -596,7 +598,7 @@ export const categories = [
     name: "Aburi Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.NigiSalmon, 
+    image: Nigi.NigiSalmon, 
     tags: [],
     allergens: [3, 7]
   },
@@ -605,7 +607,7 @@ export const categories = [
     name: "Sake Salmon Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.NigiSalmon,
+    image: Nigi.NigiSalmon,
     tags: [],
     allergens: [7]
   },
@@ -614,7 +616,7 @@ export const categories = [
     name: "Ebi Prawn Nigiri",
     description: "(2 pcs)",
     price: "€4.90",
-    image: SushiImg.NigiGamba,
+    image: Nigi.NigiGamba,
     tags: [],
     allergens: [10]
   },
@@ -623,7 +625,7 @@ export const categories = [
     name: "Maguro Tuna Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.NigiTuna,
+    image: Nigi.NigiTuna,
     tags: [],
     allergens: [7]
   },
@@ -632,7 +634,7 @@ export const categories = [
     name: "Unagi Eel Nigiri",
     description: "(2 pcs)",
     price: "€5.80",
-    image: SushiImg.NigiAnguila,
+    image: Nigi.NigiAnguila,
     tags: [],
     allergens: [1, 6, 7]
   },
@@ -787,7 +789,7 @@ export const categories = [
     name: "Chumaki Hand Roll",
     description: "1 hand roll cone",
     price: "€9.50",
-    image: SushiImg.NigiSolo,
+    image: Nigi.NigiSolo,
     tags: [],
     allergens: []
   },
