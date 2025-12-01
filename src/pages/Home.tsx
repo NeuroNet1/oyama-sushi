@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card"; 
-import { ChefHat, Leaf, Sparkles, Star, ChevronDown } from "lucide-react";
+import { ChefHat, Leaf, Sparkles, Star, ChevronDown,Phone } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration"; 
 import SnowfallZen from "@/components/SnowfallZen";
 import assets from "@/assets";
@@ -357,22 +357,23 @@ const Home = () => {
           <div className="max-w-md w-full">
             <div className="bg-background rounded-lg shadow-xl p-8 text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-                Have Questions? Reach Out on WhatsApp!
+                Have Questions? Reach Out!
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Our team is ready to assist you with reservations, menu inquiries, and special requests.
               </p>
               <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-6">
                 <a href="https://wa.me/3203867953?text=Hola" target="_blank" rel="noopener noreferrer">
-                  <img src={assets.whatapp} alt="WhatsApp" className="inline-block w-7 h-7 mr-2 align-middle" />
-                  Chat with Us on WhatsApp
+                 
+                 <Phone size="30"/> Call with Us 
                 </a>
               </Button>
             </div>
           </div>
         </div>
       </section>
-        {/* WhatsApp Button */}
+     
+        {/* WhatsApp Button 
        <section>
         <a href="https://wa.me/+573203867953?text=Hola" 
         className="fixed bottom-10 right-10 w-[60px] h-[60px] bg-[#25D366] rounded-full 
@@ -381,6 +382,8 @@ const Home = () => {
             <img src={assets.whatapp} alt="WhatsApp" width="50" height="50" />
         </a>
       </section>
+      */}
+      
       {/* Final CTA */}
       <section
         className="py-32 relative bg-cover bg-center"
@@ -402,8 +405,14 @@ const Home = () => {
             <Link to="/reservations">Book Your Table Now</Link>
           </Button>
           <p className="mt-6 text-sm">
-            Call us: <span className="font-semibold">(555) 123-4567</span> | Open Mon-Sun 5:00
-            PM - 10:00 PM
+            <span className="font-semibold text-xl"> Call us: +353 433340929</span> 
+            <p className="text-[20px] p-2">Breakfast</p>
+            Open Mon-Sun | 10:00 AM - 16:00 AM
+            <p className="text-[20px] p-2">Lunch Special</p>
+            Open Mon-Sat | 11:30 AM - 16:00 PM 
+            <p className="text-[20px] p-2">Dine In</p>
+            Open Sun - Thur | 11:30 AM -  21:30 PM
+            <p>Fri - Sat  | 11:30 AM - 22:30 PM</p>          
           </p>
         </div>
         

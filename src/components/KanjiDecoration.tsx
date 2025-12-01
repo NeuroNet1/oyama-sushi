@@ -12,7 +12,10 @@ export const KanjiDecoration = ({ className = "" }: KanjiDecorationProps) => {
     { char: "飯", translation: "rice", position: "bottom-[35%] left-[10%]", color: "text-red-decoration/[0.2]" },
     { char: "鮮", translation: "fresh", position: "top-[32%] left-[25%]", color: "text-red-decoration/[0.2]" },
     { char: "旨", translation: "delicious", position: "bottom-[48%] right-[6%]", color: "text-red-decoration/[0.2]" },
-    { char: "酒", translation: "sake", position: "top-[75%] right-[18%]", color: "text-red-decoration/[0.2]" },
+    { char: "❄️", translation: "sake", position: "top-[75%] right-[18%]", color: "text-red-decoration/[0.2]" },
+    
+
+
    
   ];
 

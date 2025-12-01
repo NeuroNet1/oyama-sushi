@@ -32,7 +32,7 @@ export const Footer = () => {
           </Link>
               </li>
               <li>
-          <Link to="/reservations" className="hover:text-accent transition-colors">
+          <Link to="/reservations" className="hover:text-accent transition-colors ">
             Reservations
           </Link>
               </li>
@@ -43,23 +43,24 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-          <MapPin size={16} className="mt-1 flex-shrink-0" />
+          <MapPin size={16} className="mt-1 flex-shrink-0" color="black" />
           <span>UNIT 1, GRAFTON COURT, Townparks, LONGFORD, N39 FA37</span>
               </li>
               <li className="flex items-center gap-2">
-          <Phone size={16} />
-          <span>+353433340929</span>
+          <Phone size={16} color="black" />
+          <span>+353 433340929</span>
               </li>
               <li>
+                {/*
           <span>
             <img src={icon} alt="WhatsApp" className="inline-block w-4 h-4 mr-1" />
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="whatsapp://send?phone=0433340929" target="_blank" rel="noopener noreferrer">
               Write us on WhatsApp
             </a>
-          </span>
+          </span>*/}
               </li>
               <li className="flex items-center gap-2">
-          <Mail size={16} />
+          <Mail size={16} color="black" />
           <span>info@oyamasushi.com</span>
               </li>
             </ul>
@@ -69,7 +70,7 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Hours</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2">
-          <Clock size={16} className="mt-1 flex-shrink-0" />
+          <Clock size={16} className="mt-1 flex-shrink-0" color="black" />
           <div>
             <p className="font-medium">Delivery</p>
             <p className="opacity-90">Mon-Thu: 12PM - 9:30PM</p>
@@ -78,7 +79,7 @@ export const Footer = () => {
           </div>
               </li>
               <li className="flex items-start gap-2">
-          <Clock size={16} className="mt-1 flex-shrink-0" />
+          <Clock size={16} className="mt-1 flex-shrink-0" color="black"/>
           <div>
             <p className="font-medium">Collection</p>
             <p className="opacity-90">Mon-Thu: 10AM - 9:30PM</p>

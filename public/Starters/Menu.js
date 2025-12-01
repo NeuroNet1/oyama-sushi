@@ -3,7 +3,6 @@ import Ramenimg from "../Ramen/Ramen.ts";
 import HotDishesImg from "../Hot_dishes/Dishes.ts";
 import SushiImg from "../Sushi/Sushi.ts"
 import Futa from "../Futomaki/Futamaki.ts";
-import NIgi from "../Nigiri/Nigi.ts";
 import Nigi from "../Nigiri/Nigi.ts";
 export const categories = [
         { value: "all", label: "All" },
@@ -15,6 +14,24 @@ export const categories = [
         { value: "Futomaki", label: "Futomaki" },
         { value: "rolls", label: "Signature Rolls" },
       ];
+      export const allergenMap = {
+  1: "Gluten",
+  2: "Nuts",
+  3: "Milk",
+  4: "Lupin",
+  5: "Celery",
+  6: "Soya",
+  7: "Fish",
+  8: "Sesame",
+  9: "Sulphur Dioxide",
+ 10: "Crustaceans",
+ 11: "Peanuts",
+ 12: "Molluscs",
+ 13: "Mustard",
+ 14: "Veg",
+ 15: "Masago",
+ 16: "Egg",
+};
       
   export const menuItems = [
     {
@@ -919,5 +936,7 @@ export const categories = [
   image: Futa.FutaDragon,
   tags: [],
   allergens: [1,6,7,10,14,15]
-}
+},
+
+
     ]; 

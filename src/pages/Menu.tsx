@@ -7,9 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import { Search, Flame, Leaf, Star } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
 import { useIsMobile } from "@/hooks/use-mobile";
-import {menuItems,categories} from "../../public/Starters/Menu";
+import {menuItems,categories,allergenMap  } from "../../public/Starters/Menu";
 import Assets from "@/assets/index";
-import logo from "../assets/Download.svg"
 const Menu = () => {
   const [searchQuery, setSearchQuery] = useState(""); 
   const [activeCategory, setActiveCategory] = useState("all");
@@ -158,8 +157,13 @@ const Menu = () => {
                   isMobile ? "text-xs line-clamp-2" : "text-sm"
                 }`}>{item.description}</p>
                 <p className={`color-red ${
-                  isMobile ? "text-xs mt-1" : "text-sm mt-2"
-                }`}>Allergens [{item.allergens.join(",")}]</p>
+  isMobile ? "text-xs mt-1" : "text-sm mt-2"
+}`}>
+  Allergens [{item.allergens.join(",")}]
+  {item.allergens.length > 0 && (
+    <> – {item.allergens.map(a => allergenMap[a]).join(", ")}</>
+  )}
+</p>
               </CardContent>
 
               </Card>
@@ -210,75 +214,98 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-gold bg-white/90 hover:scale-105 transition-transform duration-300">
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.RamenPollo}
+          src={Assets.Mixed}
           alt="Omakase Experience"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
             <Badge className="absolute top-2 left-2 bg-gold text-gold-foreground shadow-lg text-base px-3 py-1 rounded-full">
           <Star className="w-4 h-4 mr-1" />
-          Omakase
+          Mixed Sushi
             </Badge>
           </div>
           <CardContent className="pt-6 pb-8">
             <h3 className="text-2xl font-serif font-bold mb-2 text-gold drop-shadow">
-          Omakase Experience
+          Mixed Sushi Platters  
             </h3>
             <p className="text-muted-foreground text-base mb-3">
-          A curated tasting journey of the chef’s finest seasonal creations.
-            </p>
+
+           <p> 
+          Sakura Platter: 3 pcs Small Sashimi, 4 pcs Small Cucumber, 4 pcs Small Avocado, 4 pcs Medium Philadelphia.
+           <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
+              €15.90
+            </span> 
+          </p>
+
+            <p>
+           Salmon Yoridori Sushi Platter: 2 pcs Sashimi, 4 pcs Nigiri, 8 pcs Hosomaki. 
             <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
-          $65
-            </span>
+              €19.90
+            </span> 
+            </p>
+
+            <p>
+           Oyama Special Sushi Platter: 2 pcs Salmon Sushi, 2 pcs Tuna Sushi, 1 pc Ebi Prawn Nigiri, 1 pc Tofu Nigiri, 1 pc Avocado Nigiri, 4 pcs Medium Alaska Roll.
+             <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
+              €19.90
+            </span> 
+            </p>
+            </p>
+           
           </CardContent>
         </Card>
         {/* Special 2 */}
-        <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-green-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.1s" }}>
+        <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-red-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.1s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.FutaMar2}
+          src={Assets.MegaPlato}
           alt="Truffle Salmon Roll"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
-            <Badge variant="secondary" className="absolute top-2 left-2 shadow-lg text-base px-3 py-1 rounded-full bg-green-400 text-white">
-          <Leaf className="w-4 h-4 mr-1" />
-          Limited
-            </Badge>
-          </div>
-          <CardContent className="pt-6 pb-8">
-            <h3 className="text-2xl font-serif font-bold mb-2 text-green-600 drop-shadow">
-          Truffle Salmon Roll
-            </h3>
-            <p className="text-muted-foreground text-base mb-3">
-          Salmon, avocado, cucumber, truffle oil, and crispy shallots.
-            </p>
-            <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
-          $22
-            </span>
-          </CardContent>
-        </Card>
-        {/* Special 3 */}
-        <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-red-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.2s" }}>
-          <div className="relative h-52 overflow-hidden">
-            <img
-          src={Assets.RamenPollo}
-          alt="Wagyu Ramen"
-          className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
-            />
-            <Badge variant="destructive" className="absolute top-2 left-2 shadow-lg text-base px-3 py-1 rounded-full bg-red-500 text-white">
-          <Flame className="w-4 h-4 mr-1" />
-          Spicy
+            <Badge variant="secondary" className="absolute top-2 left-2 shadow-lg text-base px-3 py-1 rounded-full bg-red-400 text-white">
+          <Star className="w-4 h-4 mr-1" />
+          Bigger
             </Badge>
           </div>
           <CardContent className="pt-6 pb-8">
             <h3 className="text-2xl font-serif font-bold mb-2 text-red-500 drop-shadow">
-          Wagyu Ramen
+              Mega Platter
             </h3>
             <p className="text-muted-foreground text-base mb-3">
-          Rich broth, premium Wagyu slices, soft egg, and house chili oil.
+              
             </p>
-            <span className="text-xl font-bold text-accent bg-red-100 px-3 py-1 rounded-lg">
-          $28
+            <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
+            €29.90
             </span>
+            <p className="text-accent">[1,6,14] gluten, soya, veg</p>
+          </CardContent>
+        </Card>
+        {/* Special 3 */}
+        <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-green-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.2s" }}>
+          <div className="relative h-52 overflow-hidden">
+            <img
+          src={Assets.Vegetales}
+          alt="Wagyu Ramen"
+          className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
+            />
+            <Badge variant="destructive" className="absolute top-2 left-2 shadow-lg text-base px-3 py-1 rounded-full bg-green-500 text-white">
+          <Leaf className="w-4 h-4 mr-1" />
+          Vegetarian
+            </Badge>
+          </div>
+          <CardContent className="pt-6 pb-8">
+            <h3 className="text-2xl font-serif font-bold mb-2 text-green-600 drop-shadow">
+          Oyama Poke Bowl
+            </h3>
+            <p className="text-muted-foreground text-base mb-3">
+          Extra:
+<p>Salmon +<span className="text-accent bg-green-100  rounded-lg">€3</span></p>
+<p>Tuna + <span className="text-accent bg-green-100 rounded-lg">€4</span></p>
+<p>Salmon and Tuna +<span className="text-accent bg-green-100  rounded-lg">€4</span></p>
+            </p>
+            <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
+             €14.90 
+            </span>
+            <p className="text-accent">[1,6,14] gluten, soya, veg</p>
           </CardContent>
         </Card>
           </div>

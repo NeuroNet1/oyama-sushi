@@ -361,7 +361,10 @@ const Reservations = () => {
                     <ChevronRight className="w-4 h-4 ml-2" />
                   </Button>
                 ) : (
-                  <Button onClick={handleSubmit} className="w-40 bg-accent hover:bg-accent/90">
+                  <Button onClick={() => {
+                    handleSubmit();
+                    window.location.href = '/menu';
+                  }} className="w-40 bg-accent hover:bg-accent/90">
                     <Check className="w-4 h-4 mr-2" />
                     Confirm
                   </Button>
@@ -377,8 +380,7 @@ const Reservations = () => {
                 <CardTitle className="text-lg">Contact Us</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: reservations@oyamasushi.com</p>
+                <p>Phone:+353433340929</p>
                 <p>We're happy to assist with any questions!</p>
               </CardContent>
             </Card>
@@ -388,7 +390,6 @@ const Reservations = () => {
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
                 <p>• Reservations held for 15 minutes</p>
-                <p>• Large parties (7+) require deposit</p>
                 <p>• 24-hour cancellation notice required</p>
               </CardContent>
             </Card>

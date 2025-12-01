@@ -23,6 +23,9 @@ import restaurantInterior from "./restaurant-interior.webp";
 import chef from "./hero-chef.jpg";
 import foto from "./Card.png"
 import whatapp from "./whatapp.png";
+import Mixed from "./Mixed.webp"
+import MegaPlato from "./MegaPlato.webp"
+import Vegetales from "./Vegetales.webp"
 
 export default {
   addModerator: createSvgComponent(addModerator_raw),
@@ -36,4 +39,7 @@ export default {
   RamenPollo,
   FutaMar2,
   SuAlaska,
+  Mixed,
+  MegaPlato,
+  Vegetales
 };
