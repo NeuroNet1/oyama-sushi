@@ -8,9 +8,11 @@ import { Progress } from "@/components/ui/progress";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
+import supabase from "@/lib/supabaseClient";
 
 const Reservations = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     groupSize: "",
     date: "",
@@ -34,7 +36,6 @@ const Reservations = () => {
   };
 
   const handleNext = () => {
-    // Validación por paso
     if (currentStep === 1 && !formData.groupSize) {
       toast({ title: "Please select a group size.", variant: "destructive" });
       return;
@@ -56,7 +57,7 @@ const Reservations = () => {
     if (currentStep < totalSteps) {
       setCurrentStep((prev) => prev + 1);
     }
-  }
+  };
 
   const handleBack = () => {
     if (currentStep > 1) {
@@ -64,52 +65,61 @@ const Reservations = () => {
     }
   };
 
- const handleSubmit = async () => {
-  // Validación final antes de enviar
-  if (!formData.groupSize || !formData.date || !formData.time || !formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
-    toast({ title: "Please complete all required fields before submitting.", variant: "destructive" });
-    return;
-  }
-  try {
-    const scriptURL = "https://script.google.com/macros/s/AKfycbx_3ZcspQHwuY_iDRpBtNXMJQPRtqsmWcp1Mnj3YtKoSQKL4_q19Z8mxhff9rGaxwbb/exec";
+  // Función para extraer el número de personas del groupSize
+  const getPeopleCount = (groupSize: string): number => {
+    if (groupSize.includes("1-2")) return 2;
+    if (groupSize.includes("3-4")) return 4;
+    if (groupSize.includes("5-6")) return 6;
+    if (groupSize.includes("7+")) return 7;
+    return 1;
+  };
 
-    await fetch(scriptURL, {
-      method: "POST",
-      body: JSON.stringify(formData),
-    });
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    
+    const { data, error } = await supabase
+      .from('reservations')
+      .insert([
+        {
+          date: formData.date,
+          time: formData.time,
+          people: getPeopleCount(formData.groupSize),
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          occasion: formData.occasion || null,
+          special_requests: formData.specialRequests || null,
+          status: 'pending',
+        },
+      ])
+      .select();
 
-    toast({ title: "Reservation submitted successfully!", description: "We've received your reservation." });
+    setIsSubmitting(false);
 
-    setCurrentStep(1);
-    setFormData({
-      groupSize: "",
-      date: "",
-      time: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      occasion: "",
-      specialRequests: "",
-    });
-
-  } catch (error) {
-    console.error("Error submitting reservation:", error);
-    toast({ title: "There was an error sending your reservation.", variant: "destructive" });
-  }
-};
+    if (error) {
+      console.error('Error:', error);
+      toast({ 
+        title: "Error creating reservation", 
+        description: error.message,
+        variant: "destructive" 
+      });
+    } else {
+      toast({ 
+        title: "Reservation confirmed!", 
+        description: "We'll send you a confirmation email shortly.",
+      });
+      // Redirigir después de un pequeño delay para que el usuario vea el mensaje
+      setTimeout(() => {
+        window.location.href = '/menu';
+      }, 1500);
+    }
+  };
 
   const groupSizes = ["1-2 people", "3-4 people", "5-6 people", "7+ people"];
   const timeSlots = [
-    "5:00 PM",
-    "5:30 PM",
-    "6:00 PM",
-    "6:30 PM",
-    "7:00 PM",
-    "7:30 PM",
-    "8:00 PM",
-    "8:30 PM",
-    "9:00 PM",
+    "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", 
+    "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM",
   ];
   const occasions = ["Birthday", "Anniversary", "Business Dinner", "Special Celebration", "Just Dining"];
 
@@ -361,12 +371,19 @@ const Reservations = () => {
                     <ChevronRight className="w-4 h-4 ml-2" />
                   </Button>
                 ) : (
-                  <Button onClick={() => {
-                    handleSubmit();
-                    window.location.href = '/menu';
-                  }} className="w-40 bg-accent hover:bg-accent/90">
-                    <Check className="w-4 h-4 mr-2" />
-                    Confirm
+                  <Button 
+                    onClick={handleSubmit} 
+                    disabled={isSubmitting}
+                    className="w-40 bg-accent hover:bg-accent/90"
+                  >
+                    {isSubmitting ? (
+                      "Submitting..."
+                    ) : (
+                      <>
+                        <Check className="w-4 h-4 mr-2" />
+                        Confirm
+                      </>
+                    )}
                   </Button>
                 )}
               </div>
