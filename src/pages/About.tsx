@@ -70,23 +70,20 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Oyama Sushi was founded in 2013 by Chef Kenji Tanaka, a third-generation sushi
-                master who trained in Tokyo's renowned Tsukiji fish market district. After years of
-                perfecting his craft in Japan's most prestigious establishments, Chef Tanaka brought
-                his vision to life: a restaurant that honors traditional Japanese techniques while
-                embracing innovation.
+                Welcome to Oyama Sushi, your favorite Japanese destination!
+                Our team consists of specialized chefs with over ten years
+                 of experience, dedicated to creating each dish with passion and precision. 
+                 We carefully select the freshest, highest-quality local ingredients to offer
+                  you an authentic and unforgettable culinary experience.
               </p>
               <p>
-                What started as a small 12-seat sushi bar has grown into a beloved culinary
-                destination, yet we've never lost sight of our core values. Every morning, our chefs
-                personally select the freshest fish and ingredients, just as they did on day one.
-                Every evening, we welcome guests not as customers, but as honored friends sharing in
-                the art of Japanese cuisine.
+                At Oyama Sushi, we blend Japanese tradition with innovative touches that delight your palate.
+                 Beyond our exquisite sushi, we also offer a delicious 
+                variety of milk tea and fruit tea with unique flavors. You're sure to find your favorite!
               </p>
               <p>
-                Today, Oyama Sushi stands as a testament to the power of dedication, authenticity,
-                and the timeless appeal of masterfully prepared food. We continue to evolve while
-                staying true to the traditions that define us.
+                Everything is freshly prepared in our kitchen every day. We look forward to welcoming you and
+                 showing you why we're the go-to spot for sushi lovers and the best beverages. Come experience Oyama!
               </p>
             </div>
           </div>
