@@ -66,7 +66,7 @@ const Reservations = () => {
     }
   };
 
-  // Función para extraer el número de personas del groupSize
+  // Function to extract the number of people from groupSize
   const getPeopleCount = (groupSize: string): number => {
     if (groupSize.includes("1-2")) return 2;
     if (groupSize.includes("3-4")) return 4;
@@ -110,7 +110,7 @@ const Reservations = () => {
         title: "Reservation confirmed!", 
         description: "We'll send you a confirmation email shortly.",
       });
-      // Redirigir después de un pequeño delay para que el usuario vea el mensaje
+      // Redirect after a short delay so the user sees the message
       setTimeout(() => {
         window.location.href = '/menu';
       }, 1500);
@@ -128,10 +128,10 @@ const Reservations = () => {
   return (
     <main className="min-h-screen pt-20 bg-secondary">
        <SEO
-        title="Reservaciones | Oyama Sushi - Reserva Tu Mesa"
-        description="Reserva tu mesa en Oyama Sushi. Disfruta de una experiencia gastronómica japonesa única. Reservaciones fáciles y rápidas para grupos de cualquier tamaño."
+        title="Reservations | Oyama Sushi - Book Your Table"
+        description="Reserve your table at Oyama Sushi. Enjoy a unique Japanese dining experience. Easy and fast reservations for groups of any size."
         canonicalUrl="https://www.oyamasushi.restaurant/reservations"
-        keywords="reservar mesa sushi, reservaciones restaurante japonés, Oyama Sushi reserva, cena japonesa, reservar online"
+        keywords="book sushi table, Japanese restaurant reservations, Oyama Sushi booking, Japanese dinner, reserve online"
         ogImage="https://www.oyamasushi.restaurant/Futomaki/FutaMar2.webp"
       />
        <KanjiDecoration />

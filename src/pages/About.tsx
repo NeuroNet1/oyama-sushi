@@ -38,10 +38,10 @@ const About = () => {
   return (
     <main className="min-h-screen pt-20">
       <SEO
-        title="Sobre Nosotros | Oyama Sushi - Nuestra Historia y Filosofía"
-        description="Conoce la historia de Oyama Sushi: más de 10 años de tradición culinaria japonesa. Chef Kenji Tanaka y nuestro compromiso con la excelencia, ingredientes frescos y técnicas tradicionales."
+        title="About Us | Oyama Sushi - Our Story and Philosophy"
+        description="Discover Oyama Sushi's story: over 10 years of Japanese culinary tradition. Chef Kenji Tanaka and our commitment to excellence, fresh ingredients, and traditional techniques."
         canonicalUrl="https://www.oyamasushi.restaurant/about"
-        keywords="sobre Oyama Sushi, historia restaurante japonés, chef Kenji Tanaka, filosofía culinaria, tradición japonesa"
+        keywords="about Oyama Sushi, Japanese restaurant history, chef Kenji Tanaka, culinary philosophy, Japanese tradition"
         ogImage="https://www.oyamasushi.restaurant/Ramen/RamenOyama.webp"
       />
       {/* Hero Section */}

@@ -70,10 +70,10 @@ const Home = () => {
   return (
     <main className="min-h-screen">
       <SEO
-        title="Oyama Sushi - Auténtica Excelencia Japonesa | Restaurante de Sushi Premium"
-        description="Experimenta el arte del sushi elaborado por chefs maestros con más de 10 años de tradición. Cocina japonesa premium: sushi, ramen, nigiri y más. Reserva tu mesa hoy."
+        title="Oyama Sushi - Authentic Japanese Excellence | Premium Sushi Restaurant"
+        description="Experience the art of sushi crafted by master chefs with over 10 years of tradition. Premium Japanese cuisine: sushi, ramen, nigiri and more. Book your table today."
         canonicalUrl="https://www.oyamasushi.restaurant/"
-        keywords="sushi, restaurante japonés, sushi auténtico, chef maestro, ramen, nigiri, futomaki, comida japonesa, reservaciones"
+        keywords="sushi, Japanese restaurant, authentic sushi, master chef, ramen, nigiri, futomaki, Japanese food, reservations"
       />
       <SnowfallZen />
      
