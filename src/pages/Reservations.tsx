@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
+import SEO from "@/components/SEO";
 import supabase from "@/lib/supabaseClient";
 
 const Reservations = () => {
@@ -126,6 +127,13 @@ const Reservations = () => {
   
   return (
     <main className="min-h-screen pt-20 bg-secondary">
+       <SEO
+        title="Reservaciones | Oyama Sushi - Reserva Tu Mesa"
+        description="Reserva tu mesa en Oyama Sushi. Disfruta de una experiencia gastronómica japonesa única. Reservaciones fáciles y rápidas para grupos de cualquier tamaño."
+        canonicalUrl="https://www.oyamasushi.restaurant/reservations"
+        keywords="reservar mesa sushi, reservaciones restaurante japonés, Oyama Sushi reserva, cena japonesa, reservar online"
+        ogImage="https://www.oyamasushi.restaurant/Futomaki/FutaMar2.webp"
+      />
        <KanjiDecoration />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-5xl md:text-6xl font-serif font-bold text-center mb-4 animate-fade-in-up">

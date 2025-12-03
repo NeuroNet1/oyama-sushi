@@ -8,6 +8,7 @@ import { Search, Flame, Leaf, Star } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {menuItems,categories,allergenMap  } from "../../public/Starters/Menu";
+import SEO from "@/components/SEO";
 import Assets from "@/assets/index";
 const Menu = () => {
   const [searchQuery, setSearchQuery] = useState(""); 
@@ -23,6 +24,13 @@ const Menu = () => {
 
   return (
     <main className="min-h-screen pt-20">
+      <SEO
+        title="Menú | Oyama Sushi - Sushi, Ramen, Nigiri y Más"
+        description="Explora nuestro menú de cocina japonesa auténtica: sushi rolls, nigiri, sashimi, ramen, futomaki y platos calientes. Ingredientes frescos y recetas tradicionales."
+        canonicalUrl="https://www.oyamasushi.restaurant/menu"
+        keywords="menú sushi, carta japonesa, rolls de sushi, nigiri, sashimi, ramen, futomaki, platos japoneses, precios sushi"
+        ogImage="https://www.oyamasushi.restaurant/Sushi/SuCalifornia.webp"
+      />
       {/* Hero Section */}
       <section className="py-20 bg-secondary relative">
         <KanjiDecoration />

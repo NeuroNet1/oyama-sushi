@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { KanjiDecoration } from "@/components/KanjiDecoration";
+import SEO from "@/components/SEO";
 import assets from "@/assets/index.tsx";
 import { Award, Heart, Users, Leaf } from "lucide-react";
 
@@ -36,6 +37,13 @@ const About = () => {
 
   return (
     <main className="min-h-screen pt-20">
+      <SEO
+        title="Sobre Nosotros | Oyama Sushi - Nuestra Historia y Filosofía"
+        description="Conoce la historia de Oyama Sushi: más de 10 años de tradición culinaria japonesa. Chef Kenji Tanaka y nuestro compromiso con la excelencia, ingredientes frescos y técnicas tradicionales."
+        canonicalUrl="https://www.oyamasushi.restaurant/about"
+        keywords="sobre Oyama Sushi, historia restaurante japonés, chef Kenji Tanaka, filosofía culinaria, tradición japonesa"
+        ogImage="https://www.oyamasushi.restaurant/Ramen/RamenOyama.webp"
+      />
       {/* Hero Section */}
       <section
         className="relative py-32 bg-cover bg-center"

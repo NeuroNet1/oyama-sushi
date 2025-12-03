@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChefHat, Leaf, Sparkles, Star, ChevronDown,Phone } from "lucide-react";
 import { KanjiDecoration } from "@/components/KanjiDecoration"; 
 import SnowfallZen from "@/components/SnowfallZen";
+import SEO from "@/components/SEO";
 import assets from "@/assets";
 
 
@@ -68,6 +69,12 @@ const Home = () => {
 
   return (
     <main className="min-h-screen">
+      <SEO
+        title="Oyama Sushi - Auténtica Excelencia Japonesa | Restaurante de Sushi Premium"
+        description="Experimenta el arte del sushi elaborado por chefs maestros con más de 10 años de tradición. Cocina japonesa premium: sushi, ramen, nigiri y más. Reserva tu mesa hoy."
+        canonicalUrl="https://www.oyamasushi.restaurant/"
+        keywords="sushi, restaurante japonés, sushi auténtico, chef maestro, ramen, nigiri, futomaki, comida japonesa, reservaciones"
+      />
       <SnowfallZen />
      
       {/* Hero Section */}
