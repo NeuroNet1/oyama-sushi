@@ -3,6 +3,8 @@ const RamenCerdo = "/Ramen/RamenCerdo.webp"
 const RamenRes = "/Ramen/RamenRes.webp"
 const RamenVegano = "/Ramen/RamenVegano.webp"
 const RamenPollo = "/Ramen/RamenPollo.webp"
+const RamenMar = "/Ramen/RamenMar.webp"
+const RamenSalmon = "/Ramen/RamenSalmon.webp"
 
 
 export default {
@@ -11,4 +13,6 @@ export default {
     RamenRes,
     RamenVegano,
     RamenPollo,
+    RamenMar,
+    RamenSalmon
 };

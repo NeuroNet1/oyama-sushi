@@ -222,7 +222,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-gold bg-white/90 hover:scale-105 transition-transform duration-300">
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.Mixed}
+          src={Assets.MegaPlato}
           alt="Omakase Experience"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -238,24 +238,26 @@ const Menu = () => {
             <p className="text-muted-foreground text-base mb-3">
 
            <p> 
-          Sakura Platter: 3 pcs Small Sashimi, 4 pcs Small Cucumber, 4 pcs Small Avocado, 4 pcs Medium Philadelphia.
+          <p className="text-gold">Sakura Platter: </p> 3 pcs Small Sashimi, 4 pcs Small Cucumber, 4 pcs Small Avocado, 4 pcs Medium Philadelphia.
            <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
               €15.90
             </span> 
           </p>
 
             <p>
-           Salmon Yoridori Sushi Platter: 2 pcs Sashimi, 4 pcs Nigiri, 8 pcs Hosomaki. 
+           <p className="text-gold">Salmon Yoridori Sushi Platter: </p> 2 pcs Sashimi, 4 pcs Nigiri, 8 pcs Hosomaki. 
             <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
               €19.90
             </span> 
             </p>
 
             <p>
-           Oyama Special Sushi Platter: 2 pcs Salmon Sushi, 2 pcs Tuna Sushi, 1 pc Ebi Prawn Nigiri, 1 pc Tofu Nigiri, 1 pc Avocado Nigiri, 4 pcs Medium Alaska Roll.
+           <p className="text-gold">Oyama Special Sushi Platter: </p> 2 pcs Salmon Sushi, 2 pcs Tuna Sushi, 1 pc Ebi Prawn Nigiri, 1 pc Tofu Nigiri, 1 pc Avocado Nigiri, 4 pcs Medium Alaska Roll.
+             <p>
              <span className="text-xl font-bold text-accent bg-gold/10 px-3 py-1 rounded-lg">
               €19.90
             </span> 
+              </p> 
             </p>
             </p>
            
@@ -265,7 +267,7 @@ const Menu = () => {
         <Card className="overflow-hidden animate-fade-in-up shadow-2xl border-4 border-red-400 bg-white/90 hover:scale-105 transition-transform duration-300" style={{ animationDelay: "0.1s" }}>
           <div className="relative h-52 overflow-hidden">
             <img
-          src={Assets.MegaPlato}
+          src={Assets.Mixed}
           alt="Truffle Salmon Roll"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
             />
@@ -275,15 +277,19 @@ const Menu = () => {
             </Badge>
           </div>
           <CardContent className="pt-6 pb-8">
+            <div className="flex justify-between items-start mb-2">
+
             <h3 className="text-2xl font-serif font-bold mb-2 text-red-500 drop-shadow">
               Mega Platter
             </h3>
-            <p className="text-muted-foreground text-base mb-3">
-              
-            </p>
             <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
             €29.90
             </span>
+            </div>
+            <p className="text-muted-foreground text-base mb-3">
+              
+            </p>
+            
             <p className="text-accent">[1,6,14] gluten, soya, veg</p>
           </CardContent>
         </Card>
@@ -301,18 +307,22 @@ const Menu = () => {
             </Badge>
           </div>
           <CardContent className="pt-6 pb-8">
+            <div className="flex justify-between items-start mb-2">
+
             <h3 className="text-2xl font-serif font-bold mb-2 text-green-600 drop-shadow">
           Oyama Poke Bowl
             </h3>
+            <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
+             €14.90 
+            </span>
+            </div>
             <p className="text-muted-foreground text-base mb-3">
           Extra:
 <p>Salmon +<span className="text-accent bg-green-100  rounded-lg">€3</span></p>
 <p>Tuna + <span className="text-accent bg-green-100 rounded-lg">€4</span></p>
 <p>Salmon and Tuna +<span className="text-accent bg-green-100  rounded-lg">€4</span></p>
             </p>
-            <span className="text-xl font-bold text-accent bg-green-100 px-3 py-1 rounded-lg">
-             €14.90 
-            </span>
+            
             <p className="text-accent">[1,6,14] gluten, soya, veg</p>
           </CardContent>
         </Card>

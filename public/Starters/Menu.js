@@ -40,7 +40,7 @@ export const categories = [
       description: "Grilled Pork Minced and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€8.30",
       image: Img.gyonsas,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -49,7 +49,7 @@ export const categories = [
       description: "Grilled Prawn and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€8.90",
       image: Img.gyonsas2,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,10,14]
     },
     {
@@ -58,7 +58,7 @@ export const categories = [
       description: "Grilled Chicken and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€7.90",
       image: Img.gyonsas,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -67,7 +67,7 @@ export const categories = [
       description: "Grilled Duck and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€8.50",
       image: Img.gyonsas2,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -76,7 +76,7 @@ export const categories = [
       description: "Grilled Mixed Vegetable Dumplings Served with Gyoza Sauce",
       price: "€7.50",
       image: Img.gyonsas,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -85,8 +85,8 @@ export const categories = [
       description: "Deep Fried Tiger Prawns in Breadcrumbs Served with Chili Garlic Sauce",
       price: "€9.80",
       image: Img.tempura,
-      tags: ["chefs-pick", "premium"],
-      allergens: [1,6,7,10,15]
+      tags: ["chefs-pick"],
+      allergens: [1,6,7,10]
     },
     {
       category: "Starter",
@@ -94,17 +94,17 @@ export const categories = [
       description: "Three Skewers of Grilled Chicken and Asparagus Coated in Teriyaki Sauce and Sprinkled with Shichimi Powder",
       price: "€8.30",
       image: Img.brochetasDePollo,
-      tags: ["chefs-pick", "premium"],
-      allergens: [1,6,3]
+      tags: ["chefs-pick"],
+      allergens: [1,6]
     },
     {
       category: "Starter",
       name: "Tebasaki Chicken Wings",
-      description: "Deep Fried Chicken Wings Coated with Homemade Sweet Chili Sauce",
+      description: "Deep Fried Chicken Wings Coated with Homemade Sweet Chili Sauce 7 pcs",
       price: "€8.30",
       image: Img.alitas,
-      tags: ["chefs-pick", "premium"],
-      allergens: [1,6,7]
+      tags: ["chefs-pick"],
+      allergens: [1,6]
     },
     {
       category: "Starter",
@@ -112,16 +112,16 @@ export const categories = [
       description: "Squid Rings Coated in Breadcrumbs Served with Sweet Chili Sauce",
       price: "€8.30",
       image: Img.calamar,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,7]
     },
     {
       category: "Starter",
       name: "Agedashi Tofu",
-      description: "Deep Fried Tofu Served with a Tasty Ubu Dip Garnished with Seaweed",
+      description: "Deep Fried Tofu Served with a Tasty Ubu Dip Garnished with Seaweed 6 pcs",
       price: "€7.50",
       image: Img.tofu,
-      tags: ["vegetarian", "premium"],
+      tags: ["vegetarian"],
       allergens: [1,6]
     },
     {
@@ -130,8 +130,8 @@ export const categories = [
       description: "Steamed Green Soy Beans Served with a Star of Chili Pepper Salt",
       price: "€6.50",
       image: Img.edamame,
-      tags: ["chefs-pick", "premium"],
-      allergens: [6]
+      tags: ["chefs-pick"],
+      allergens: [1,6,14]
     },
     {
       category: "Starter",
@@ -139,8 +139,8 @@ export const categories = [
       description: "Ebi Prawn in Tempura Powder, Deep Fried in Pan Oil with Soy Sauce",
       price: "€9.90",
       image: Img.tempura,
-      tags: ["chefs-pick", "premium"],
-      allergens: [1,6,7,10,14]
+      tags: ["chefs-pick"],
+      allergens: [1,6,10,14]
     },
     {
       category: "Starter",
@@ -148,7 +148,7 @@ export const categories = [
       description: "Vegetable in Tempura Powder, Deep Fried in Pan Oil with Soy Sauce",
       price: "€8.90",
       image: Img.tempura2,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -157,7 +157,7 @@ export const categories = [
       description: "Vegetable Marinated Spare Ribs in Teriyaki with Soy Sauce",
       price: "€8.30",
       image: Img.costillas,
-      tags: ["chefs-pick", "premium"],
+      tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
     {
@@ -166,8 +166,8 @@ export const categories = [
       description: "Smoked Salmon and Fresh Mix Vegetables Served with Homemade Sauce",
       price: "€11.90",
       image: Img.SalmonAhumado,
-      tags: ["chefs-pick", "premium"],
-      allergens: [3,7]
+      tags: ["chefs-pick"],
+      allergens: [6,7,14]
     },
 
     // Ramen example
@@ -222,7 +222,7 @@ export const categories = [
       name: "Seafood Ramen",
       description: "Ramen Noodles Topped with Tiger Prawns, Grilled Tuna, Squid, Mussels, Narutomaki, Salmon and Coriander. Served in a Miso Soup with Seaweed Menma and Spring Onion",
       price: "€15.50",
-      image: Ramenimg.RamenRes,
+      image: Ramenimg.RamenMar,
       tags: ["spicy"],
       allergens: [1,6,7,10,12],
     },
@@ -240,19 +240,19 @@ export const categories = [
       name: "Salmon Miso Ramen",
       description: "Ramen Noodles Served in Chicken Miso Flavoured Broth, Topped with Grilled Salmon, Seasonal Vegetables, Fungus, Spring Onion, Grilled Onion, Bean Sprout and Grilled Seaweed",
       price: "€14.90",
-      image: Ramenimg.RamenVegano,
+      image: Ramenimg.RamenSalmon,
       tags: ["spicy"],
       allergens: [3,6,7],
       
     },
-    //Hot Dishes example
+    //Hot Dishes Sobas
      {
     category: "hot",
     name: "Oyama House Yaki Soba",
     description:
       "Stir-fried Egg Noodles with Prawns, Chicken Fillet, Broccoli, Carrot, Egg and Seasonal Vegetables Garnished with Pickles",
     price: "€13.90",
-    image: HotDishesImg.Pasta,
+    image: HotDishesImg.YakiOyama,
     tags: [],
     allergens: [1, 8, 10, 16],
   },
@@ -262,7 +262,7 @@ export const categories = [
     description:
       "Grilled Chicken Breast on Top of Noodles Mixed with Vegetables. Garnished with Roasted Seaweed, Spring Onion, Fried Onion & Coriander with Teriyaki and Curry Oil",
     price: "€13.90",
-    image: HotDishesImg.Pasta2,
+    image: HotDishesImg.YakiPollo,
     tags: [],
     allergens: [1, 6],
   },
@@ -272,7 +272,7 @@ export const categories = [
     description:
       "Stir-fried Egg Noodles with Crispy Tofu, Vegetables, Onions, Spring Onion, Sweet Pepper, Roasted Seaweed, Fried Onion",
     price: "€12.00",
-    image: HotDishesImg.Pasta3,
+    image: HotDishesImg.YakiUdon,
     tags: ["vegetarian"],
     allergens: [1, 6, 8, 10, 16],
   },
@@ -282,29 +282,29 @@ export const categories = [
     description:
       "Teppan-fried Udon Noodles Chicken Fillet, Vegetables, Onions, Spring Onion Sweet Pepper, Roasted Seaweed, Fried Onion and Garnished with a Hint of Curry Oil",
     price: "€13.90",
-    image: HotDishesImg.Pasta,
+    image: HotDishesImg.YakiUdon,
     tags: [],
     allergens: [1, 6, 8, 10, 16],
   },
 
-  // --- hot ---
+  // --- hot dishes arrozes ---
   {
     category: "hot",
     name: "Oyama House Cha Han",
     description:
       "Stir-fried Japanese Rice with Mixed Veg, Egg, Tiger Prawn, Pork Belly & Marinated Chicken Fillet. Japanese Pickles.",
     price: "€13.50",
-    image: HotDishesImg.Arroz,
+    image: HotDishesImg.ArrozOyama,
     tags: [],
     allergens: [6, 10, 14, 16],
   },
   {
     category: "hot",
-    name: "Seafood Cha Han",
+    name: "Oyama special Cha Han",
     description:
       "Stir-fried Japanese Rice with Mixed Seafood (Squid, Prawn, Salmon, Katsuobushi), Vegetables, Egg and Japanese Pickles.",
     price: "€14.50",
-    image: HotDishesImg.Arroz,
+    image: HotDishesImg.ArrozMar,
     tags: [],
     allergens: [7, 10, 14, 16],
   },
@@ -314,7 +314,7 @@ export const categories = [
     description:
       "Stir-fried Japanese Rice with Mixed Vegetables, Kimchi, Pork Fillet and Egg. Garnished with Seaweed & Japanese Pickles.",
     price: "€13.50",
-    image: HotDishesImg.Arroz,
+    image: HotDishesImg.ArrozPollo,
     tags: [],
     allergens: [6, 7, 10, 14, 16],
   },
@@ -324,7 +324,7 @@ export const categories = [
     description:
       "Stir-fried Japanese Rice with Mixed Vegetables. Tofu, Sweet Corn, Seaweed & Japanese Pickles.",
     price: "€12.00",
-    image: HotDishesImg.Arroz,
+    image: HotDishesImg.ArrozVeg,
     tags: ["vegetarian"],
     allergens: [14],
   },
@@ -367,7 +367,7 @@ export const categories = [
     description:
       "Grilled Duck Breast, 2 pcs Homemade Grilled Prawn Gyoza, 3 pcs Salmon Sashimi, Miso Glazed Irish Chicken Breast Served with Rice",
     price: "€14.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.BentoOyama,
     tags: [],
     allergens: [1, 6, 8, 10, 16],
   },
@@ -377,7 +377,7 @@ export const categories = [
     description:
       "Deep Fried Chicken Fillet Served with Gyoza Sauce, Teriyaki Sauce with Steamed Rice",
     price: "€13.50",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.BentoPollo,
     tags: [],
     allergens: [1, 3, 6, 8, 10, 14],
   },
@@ -387,17 +387,17 @@ export const categories = [
     description:
       "Grilled Salmon Teriyaki Served with Steamed Broccoli, 2 pcs Gyoza, 3 pcs Salmon Sushi and Steamed Rice",
     price: "€13.90",
-    image: HotDishesImg.bento2,
+    image: HotDishesImg.BentoSalmon,
     tags: [],
     allergens: [1, 6, 7, 8, 10, 14],
   },
   {
     category: "hot",
-    name: "Brexit Bento Box",
+    name: "Steak Bento Box",
     description:
       "Grilled Salmon, Stir-Fried Vegetables 3 pcs Gyoza, Slow Cooked Spicy Chicken with Soy Sauce and Steamed Rice",
     price: "€12.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.BentoRes,
     tags: [],
     allergens: [1 ,6, 7, 8, 10],
   },
@@ -407,7 +407,7 @@ export const categories = [
     description:
       "Slow Fried Tofu & Vegetable Gyoza with Gyoza Sauce, Stir-Fried Vegetables, 2 pcs Chef Sushi and Steamed Rice",
     price: "€12.90",
-    image: HotDishesImg.bento2,
+    image: HotDishesImg.BentoTofu,
     tags: ["vegetarian"],
     allergens: [1, 6, 8, 14],
   },
@@ -481,7 +481,7 @@ export const categories = [
     description:
       "Grilled Freshwater Eel served on Rice with Homemade Teriyaki Sauce",
     price: "€17.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.PatoDom,
     tags: [],
     allergens: [6,7, 8, 14, 16],
   },
@@ -491,7 +491,7 @@ export const categories = [
     description:
       "Stir-fried Beef Steak served on Japanese Rice with Homemade Soy Sauce",
     price: "€16.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.ResDom,
     tags: [],
     allergens: [6, 8, 14, 16],
   },
@@ -501,7 +501,7 @@ export const categories = [
     description:
       "Stir-fried Chicken served with Japanese Rice and Homemade Sauce",
     price: "€15.50",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.PolloDom,
     tags: [],
     allergens: [6, 8, 14, 16],
   },
@@ -511,7 +511,7 @@ export const categories = [
     description:
       "Crispy Fried Duck served on Rice with Homemade Teriyaki Sauce",
     price: "€15.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.PatoDom,
     tags: [],
     allergens: [6, 8, 14, 16],
   },

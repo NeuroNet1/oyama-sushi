@@ -1,22 +1,50 @@
-const Pasta = "/Hot_dishes/Pasta.jpg"
-const Pasta2 = "/Hot_dishes/Pasta2.jpg"
-const Pasta3 = "/Hot_dishes/Pasta1.jpg"
 const Curry = "/Hot_dishes/CURRY.jpg"
-const Arroz = "/Hot_dishes/Arroz.jpg"
-const bento1 = "/Hot_dishes/Bento.jpg"
-const bento2 = "/Hot_dishes/Bento1.jpg"
-const bentoSalmon = "/Hot_dishes/Bentosalmon.jpg"
 const frito = "/Hot_dishes/Frito.jpg"
+//arroz
+const ArrozOyama = "/Hot_dishes/ArrozOyama.webp"
+const ArrozMar = "/Hot_dishes/ArrozMar.jpg"
+const ArrozPollo = "/Hot_dishes/ArrozPollo.webp"
+const ArrozVeg = "/Hot_dishes/ArrozVeg.webp"
+//soba
+const YakiPollo = "/Hot_dishes/YakiPollo.webp"
+const YakiUdon = "/Hot_dishes/YakiUdon.webp"
+const YakiOyama = "/Hot_dishes/YakiOyama.jpg"
+//Bento
+const BentoSalmon = "/Hot_dishes/BentoSalmon.jpg" 
+const BentoPato = "/Hot_dishes/BentoPato.webp" 
+const BentoRes = "/Hot_dishes/BentoRes.webp"
+const BentoOyama = "/Hot_dishes/BentoOyama.webp"
+const BentoPollo = "/Hot_dishes/BentoPollo.jpg"
+const BentoTofu = "/Hot_dishes/BentoTofu.webp"
+
+//donburi
+const PolloDom = "/Hot_dishes/PolloDom.webp"
+const ResDom = "/Hot_dishes/ResDom.webp"
+const PatoDom = "/Hot_dishes/PatoDom.webp"
 
 
 export default {    
-    Pasta,
-    Pasta2,
-    Pasta3,
+    //donburi
+    PolloDom,
+    ResDom,
+    PatoDom,
+    //soba
+    YakiPollo,
+    YakiUdon,
+    YakiOyama,
     Curry,
-    Arroz,
-    bento1,
-    bento2,
-    bentoSalmon,
+    //arroz
+    ArrozMar,
+    ArrozOyama,
+    ArrozPollo,
+    ArrozVeg,
+    //bento
+    BentoSalmon,
+    BentoPato,
+    BentoRes,
+    BentoOyama,
+    BentoPollo,
+    BentoTofu,
+    //extras
     frito,
 }

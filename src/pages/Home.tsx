@@ -380,16 +380,8 @@ const Home = () => {
         </div>
       </section>
      
-        {/* WhatsApp Button 
-       <section>
-        <a href="https://wa.me/+573203867953?text=Hola" 
-        className="fixed bottom-10 right-10 w-[60px] h-[60px] bg-[#25D366] rounded-full 
-                   flex items-center justify-center z-[100] shadow-lg 
-                   animate-pulse-smooth hover:scale-110 transition-transform" target="_blank" rel="noopener noreferrer">
-            <img src={assets.whatapp} alt="WhatsApp" width="50" height="50" />
-        </a>
-      </section>
-      */}
+        {/* WhatsApp Button*/}
+      
       
       {/* Final CTA */}
       <section

@@ -1,4 +1,4 @@
-const alitas = "/Starters/Alitas.png"
+const alitas = "/Starters/Alitas.webp"
 const bento = "/Starters/Bento.png"
 const brochetasDePollo = "/Starters/Brochetas_de_pollo.png"
 const gyonsas = "/Starters/Gyonsas.png"
