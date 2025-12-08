@@ -521,7 +521,7 @@ export const categories = [
     description:
       "Stir-fried Tofu served on Japanese Rice with Homemade Sauce",
     price: "€15.00",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.TofuDom,
     tags: ["vegetarian"],
     allergens: [6, 8, 14, 16],
   },
@@ -531,7 +531,7 @@ export const categories = [
     description:
       "Grilled Salmon served with Japanese Rice and Homemade Sauce",
     price: "€15.90",
-    image: HotDishesImg.bento1,
+    image: HotDishesImg.SalmonDom,
     tags: [],
     allergens: [6, 8, 14, 16],
   },

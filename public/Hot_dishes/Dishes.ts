@@ -21,6 +21,8 @@ const BentoTofu = "/Hot_dishes/BentoTofu.webp"
 const PolloDom = "/Hot_dishes/PolloDom.webp"
 const ResDom = "/Hot_dishes/ResDom.webp"
 const PatoDom = "/Hot_dishes/PatoDom.webp"
+const TofuDom = "/Hot_dishes/TofuDom.webp"
+const SalmonDom = "/Hot_dishes/SalmonDom.webp"
 
 
 export default {    
@@ -28,6 +30,8 @@ export default {
     PolloDom,
     ResDom,
     PatoDom,
+    TofuDom,
+    SalmonDom,
     //soba
     YakiPollo,
     YakiUdon,
