@@ -68,11 +68,19 @@ const Reservations = () => {
 
   // Function to extract the number of people from groupSize
   const getPeopleCount = (groupSize: string): number => {
-    if (groupSize.includes("1-2")) return 2;
-    if (groupSize.includes("3-4")) return 4;
-    if (groupSize.includes("5-6")) return 6;
-    if (groupSize.includes("7+")) return 7;
+    if (groupSize.includes("1")) return 2;
+    if (groupSize.includes("2-3")) return 4;
+    if (groupSize.includes("4-5")) return 6;
+    if (groupSize.includes("6-7")) return 7;
     return 1;
+  };
+
+  // Function to get minimum date based on group size
+  const getMinDate = () => {
+    const today = new Date();
+    const daysToAdd = (formData.groupSize.includes("6-7")) ? 2 : 1;
+    today.setDate(today.getDate() + daysToAdd);
+    return today.toISOString().split("T")[0];
   };
 
   const handleSubmit = async () => {
@@ -117,7 +125,7 @@ const Reservations = () => {
     }
   };
 
-  const groupSizes = ["1-2 people", "3-4 people", "5-6 people", "7+ people"];
+  const groupSizes = ["1 people", "2-3 people", "4-5 people", "6-7 people"];
   const timeSlots = [
     "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", 
     "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM",
@@ -185,17 +193,19 @@ const Reservations = () => {
               {currentStep === 2 && (
                 <div className="space-y-4">
                   <Label htmlFor="date">Select Date</Label>
+                  {(formData.groupSize.includes("6-7")) && (
+                    <p className="text-sm text-amber-600 bg-amber-50 p-3 rounded-lg">
+                      ⚠️ For groups of 6+ people, reservations require at least 2 days advance notice.
+                      Same policy applies for cancellations.
+                    </p>
+                  )}
                   <Input
                     type="date"
                     id="date"
                     name="date"
                     value={formData.date}
                     onChange={handleInputChange}
-                    min={(() => {
-                      const tomorrow = new Date();
-                      tomorrow.setDate(tomorrow.getDate() + 1);
-                      return tomorrow.toISOString().split("T")[0];
-                    })()}
+                    min={getMinDate()}
                     className="text-lg h-12"
                     required
                   />
