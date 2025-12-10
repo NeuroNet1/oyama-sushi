@@ -48,7 +48,7 @@ export const categories = [
       name: "Home Made Prawn Gyoza",
       description: "Grilled Prawn and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€8.90",
-      image: Img.gyonsas2,
+      image: Img.Gyonsas3,
       tags: ["chefs-pick"],
       allergens: [1,6,10,14]
     },
@@ -57,7 +57,7 @@ export const categories = [
       name: "Japanese Chicken Gyoza",
       description: "Grilled Chicken and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€7.90",
-      image: Img.gyonsas,
+      image: Img.Gyonsas3,
       tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
@@ -66,7 +66,7 @@ export const categories = [
       name: "Japanese Duck Gyoza",
       description: "Grilled Duck and Vegetable Dumplings Served with Gyoza Sauce",
       price: "€8.50",
-      image: Img.gyonsas2,
+      image: Img.Gyonsas4,
       tags: ["chefs-pick"],
       allergens: [1,6,14]
     },
@@ -429,7 +429,7 @@ export const categories = [
     description:
       "Stir-fried Salmon topped with Homemade Teriyaki Sauce. Served with Japanese Rice and Miso Soup",
     price: "€14.50",
-    image: HotDishesImg.frito,
+    image: HotDishesImg.frito2,
     tags: [],
     allergens: [1,6,7,8],
   },
@@ -449,7 +449,7 @@ export const categories = [
     description:
       "Stir-fried Pork Belly topped with Homemade Teriyaki Sauce. Served with Japanese Rice and Miso Soup",
     price: "€14.50",
-    image: HotDishesImg.frito,
+    image: HotDishesImg.frito2,
     tags: [],
     allergens: [1, 6, 8],
   },
@@ -459,7 +459,7 @@ export const categories = [
     description:
       "Stir-fried Beef Steak topped with Homemade Teriyaki Sauce. Served with Japanese Rice and Miso Soup",
     price: "€15.50",
-    image: Img.tempura2,
+    image: Img.tempura,
     tags: [],
     allergens: [1, 6, 8],
   },
@@ -469,7 +469,7 @@ export const categories = [
     description:
       "Stir-fried Tofu topped with Homemade Teriyaki Sauce. Served with Japanese Rice and Miso Soup",
     price: "€13.90",
-    image: Img.tempura,
+    image: HotDishesImg.frito,
     tags: ["vegetarian"],
     allergens: [1,6, 8],
   },
@@ -813,7 +813,7 @@ export const categories = [
   // --- FUTOMAKI ---
   {
   category: "Futomaki",
-  name: "Vegan Futomaki  (8 Pieces)",
+  name: "Vegan Futomaki  (4 Pieces)",
   description: "Avocado, Cucumber, Tofu, Veg Salad Top Sesame Seeds",
   price: "€8.90",
   image: Futa.FutaVegan,

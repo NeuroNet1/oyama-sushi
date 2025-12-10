@@ -4,10 +4,11 @@ const SashimiMix = "/Sushi/SashimiMix.webp";
 
 //Rolls
 const Rpepino = "/Sushi/RollPepino.webp";
-const RAguacate = "/Sushi/RollAguacate.webp";
+const RAguacate = "/Sushi/RollAvocado.png";
 const RCangrejo = "/Sushi/RollCangrejo.webp";
 const RSalmon = "/Sushi/RollSalmon.webp";
 const RAtun = "/Sushi/RollAtun.webp";
+
 //Sushi
 const SuVegano = "/Sushi/SuVegano.webp";
 const SuAguacate = "/Sushi/SuAguacate.webp";

@@ -1,5 +1,8 @@
 const Curry = "/Hot_dishes/CURRY.jpg"
+//fritos
 const frito = "/Hot_dishes/Frito.jpg"
+const frito1 = "/Hot_dishes/Frito2.jpg"
+const frito2 = "/Hot_dishes/Frito3.png"
 //arroz
 const ArrozOyama = "/Hot_dishes/ArrozOyama.webp"
 const ArrozMar = "/Hot_dishes/ArrozMar.jpg"
@@ -51,4 +54,6 @@ export default {
     BentoTofu,
     //extras
     frito,
+    frito1,
+    frito2,
 }

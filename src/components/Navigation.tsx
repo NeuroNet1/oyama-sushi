@@ -77,7 +77,7 @@ export const Navigation = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/menu", label: "Menu" },
-    { path: "/about", label: "About Us" },
+    { path: "/about", label: "About Us" },    
   ];
 
   return (
@@ -122,7 +122,7 @@ export const Navigation = () => {
                 alt="Oyama Sushi Logo" 
                 className="flex left-0 w-[140px] object-contain"
               />
-            {navLinks.slice(1, 3).map((link) => (
+            {navLinks.slice(0,3).map((link) => (
               <Link
                 key={link.path}
                 to={link.path}

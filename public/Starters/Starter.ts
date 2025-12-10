@@ -1,8 +1,12 @@
 const alitas = "/Starters/Alitas.webp"
 const bento = "/Starters/Bento.png"
 const brochetasDePollo = "/Starters/Brochetas_de_pollo.png"
-const gyonsas = "/Starters/Gyonsas.png"
-const gyonsas2 = "/Starters/GY.png"
+//gyonsas
+const gyonsas = "/Starters/Gyonsas.jpg"
+const Gyonsas3 = "/Starters/Gyonsas.webp"
+const Gyonsas4 = "/Starters/Gyonsas2.webp"
+
+
 const pastaFrita = "/Starters/Pasta_frita.png"
 const rolls = "/Starters/Rolls.png"
 const tempura = "/Starters/Tempura.png"
@@ -18,7 +22,8 @@ export default {
   bento,
   brochetasDePollo,
   gyonsas,
-  gyonsas2,
+  Gyonsas3,
+  Gyonsas4,
   costillas,
   pastaFrita,
   rolls,
