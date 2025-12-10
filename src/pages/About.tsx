@@ -7,7 +7,7 @@ import assets from "@/assets/index.tsx";
 import { Award, Heart, Users, Leaf } from "lucide-react";
 
 const About = () => {
-  
+
   const philosophy = [
     {
       icon: <Heart className="w-8 h-8" />,
@@ -66,24 +66,18 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-serif font-bold mb-6 text-center">
-              A Legacy Born from Tradition
+              The Secret to a Long and Vibrant Life
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Welcome to Oyama Sushi, your favorite Japanese destination!
-                Our team consists of specialized chefs with over ten years
-                 of experience, dedicated to creating each dish with passion and precision. 
-                 We carefully select the freshest, highest-quality local ingredients to offer
-                  you an authentic and unforgettable culinary experience.
+                It is often said that in Japan, age is just a number. The Japanese people enjoy one of the
+                longest life expectancies in the world, living with vitality well into their golden years.
+                The secret? It isn't magic—it is a diet rooted in balance, purity, and respect for nature.
               </p>
               <p>
-                At Oyama Sushi, we blend Japanese tradition with innovative touches that delight your palate.
-                 Beyond our exquisite sushi, we also offer a delicious 
-                variety of milk tea and fruit tea with unique flavors. You're sure to find your favorite!
-              </p>
-              <p>
-                Everything is freshly prepared in our kitchen every day. We look forward to welcoming you and
-                 showing you why we're the go-to spot for sushi lovers and the best beverages. Come experience Oyama!
+                At Oyama Sushi, we continue this story of wellness. We believe that true nourishment comes from quality,
+                which is why we craft every dish using exclusively fresh, premium ingredients. We invite you to experience 
+                not just the authentic taste of Japan, but the healthy lifestyle that comes with it. Eat well, live longer.
               </p>
             </div>
           </div>
@@ -147,11 +141,11 @@ const About = () => {
           </div>
         </div>
       </section>
- {/*Map Section*/}
+      {/*Map Section*/}
       <section className="py-20 bg-secondary" >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-serif font-bold mb-6 text-center">Find Us</h2>
-          
+
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               title="Oyama Sushi Location"
@@ -163,7 +157,7 @@ const About = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-            
+
             {/* Info Card Overlay */}
             <div className="absolute top-2 left-2 bg-background rounded-lg shadow-xl p-6 max-w-sm z-10">
               <h3 className="text-2xl font-serif font-bold mb-2">Oyama Sushi Japanese Restaurant</h3>
@@ -171,7 +165,7 @@ const About = () => {
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                 <span className="text-sm font-medium text-green-600">Open until 9:30PM</span>
               </div>
-              
+
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div>
                   <p className="font-medium">UNIT 1, GRAFTON COURT, Townparks,</p>
@@ -180,14 +174,14 @@ const About = () => {
                     Phone: <a href="tel:+353433340929" className="text-accent hover:underline">+353433340929</a>
                   </p>
                 </div>
-                
+
                 <div>
                   <p className="font-semibold text-foreground mb-1">Delivery Hours</p>
                   <p>Monday - Thursday: 12PM - 9:30PM</p>
                   <p>Friday - Saturday: 12PM - 10:30PM</p>
                   <p>Sunday: 12PM - 9:30PM</p>
                 </div>
-                
+
                 <div>
                   <p className="font-semibold text-foreground mb-1">Collection Hours</p>
                   <p>Monday - Thursday: 10AM - 9:30PM</p>
@@ -195,15 +189,15 @@ const About = () => {
                   <p>Sunday: 10AM - 9:30PM</p>
                 </div>
               </div>
-              
+
               <div className="flex gap-3 mt-4">
                 <Button asChild className="flex-1 bg-accent hover:bg-accent/90">
                   <Link to="/reservations">Book Now</Link>
                 </Button>
                 <Button asChild variant="outline" className="flex-1">
-                  <a 
-                    href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z" 
-                    target="_blank" 
+                  <a
+                    href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Get directions
@@ -213,7 +207,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>  
+      </section>
       {/* CTA Section */}
       <section className="py-20 relative">
         <KanjiDecoration />

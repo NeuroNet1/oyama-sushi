@@ -310,9 +310,8 @@ const Home = () => {
         </h1>
 
         <p className="text-gray-700 mt-3">
-          The perfect way to let them choose their favorite fragrance or any
-          premium product from our store. Elegant, fast and beautifully
-          presented — ideal for memorable Christmas gifts.
+          Share the taste of true quality with your love ones. 
+          Let them indulge in our premium, fresh Japanese flavors.
         </p>
 
         {/* Botones */}
