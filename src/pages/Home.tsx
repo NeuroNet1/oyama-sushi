@@ -138,9 +138,54 @@ const Home = () => {
       </div>
       </section>
       
+  {/* Gif Car */}
+  <section className="p-20">
+
+       <div className="w-full p-20 max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 ">
+      
+      {/* Imagen */}
+      <div
+        className="w-full  md:w-1/3 h-48 md:h-40 rounded-xl bg-cover bg-center shadow-md"
+       
+      >
+        <img src={assets.foto} alt="" />
+      </div>
+
+      {/* Texto */}
+      <div className="flex-1">
+        <span className="text-red-600 font-bold tracking-wide text-sm">
+          🎄✨ Christmas at Glow
+        </span>
+
+        <h1 className="text-2xl font-bold text-gray-900 mt-2">
+          Surprise your loved ones with our{" "}
+          <span className="text-red-700">Christmas Edition Gift Card</span>
+        </h1>
+
+        <p className="text-gray-700 mt-3">
+          Share the taste of true quality with your love ones. 
+          Let them indulge in our premium, fresh Japanese flavors.
+        </p>
+
+        {/* Botones */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-6">
+          <a
+            href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-xl shadow-lg transition"
+          >
+            🎁 Visit our store & get yours today
+          </a>
+
+          <span className="text-yellow-600 font-bold sm:ml-auto">
+            Give quality. Give style. Give Glow. ✨
+          </span>
+        </div>
+      </div>
+    </div>
+      </section>
 
       {/* Featured Dishes */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-secondary">
       <KanjiDecoration />
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">Featured Dishes</h2>
@@ -177,7 +222,7 @@ const Home = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 bg-secondary relative">
+      <section className="py-20  relative">
         <KanjiDecoration />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -219,7 +264,7 @@ const Home = () => {
         </div>
       </section>
       {/*Map Section*/}
-      <section className="py-20">
+      <section className="py-20 bg-secondary relative">
        
         <div className="container mx-auto px-4">
 
@@ -287,49 +332,7 @@ const Home = () => {
           </div>
         </div>
       </section>  
-        {/* Gif Car */}
-       <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
       
-      {/* Imagen */}
-      <div
-        className="w-full md:w-1/3 h-48 md:h-40 rounded-xl bg-cover bg-center shadow-md"
-       
-      >
-        <img src={assets.foto} alt="" />
-      </div>
-
-      {/* Texto */}
-      <div className="flex-1">
-        <span className="text-red-600 font-bold tracking-wide text-sm">
-          🎄✨ Christmas at Glow
-        </span>
-
-        <h1 className="text-2xl font-bold text-gray-900 mt-2">
-          Surprise your loved ones with our{" "}
-          <span className="text-red-700">Christmas Edition Gift Card</span>
-        </h1>
-
-        <p className="text-gray-700 mt-3">
-          Share the taste of true quality with your love ones. 
-          Let them indulge in our premium, fresh Japanese flavors.
-        </p>
-
-        {/* Botones */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-6">
-          <a
-            href="https://www.google.com/maps/dir//Oyama+Sushi+Japanese+Restaurant,+UNIT+1,+GRAFTON+COURT,+Townparks,+LONGFORD,+N39+FA37/@53.728229,-7.809198,15z"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-xl shadow-lg transition"
-          >
-            🎁 Visit our store & get yours today
-          </a>
-
-          <span className="text-yellow-600 font-bold sm:ml-auto">
-            Give quality. Give style. Give Glow. ✨
-          </span>
-        </div>
-      </div>
-    </div>
-
   {/* Testimonials */}
   <section className="py-16 relative">
         <KanjiDecoration />
