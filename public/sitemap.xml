@@ -1,130 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Página Principal -->
+  <!-- Home Page -->
   <url>
     <loc>https://www.oyamasushi.restaurant/</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.oyamasushi.restaurant/Sushi/SuAlaska.webp</image:loc>
-      <image:title>Oyama Sushi - Sushi Alaska Premium</image:title>
-      <image:caption>Delicioso sushi Alaska preparado por chefs maestros en Oyama Sushi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Ramen/RamenOyama.webp</image:loc>
-      <image:title>Ramen Oyama Especial</image:title>
-      <image:caption>Auténtico ramen japonés con ingredientes frescos</image:caption>
+      <image:title>Oyama Sushi - Premium Alaska Roll</image:title>
+      <image:caption>Delicious Alaska sushi roll from Oyama Sushi Restaurant</image:caption>
     </image:image>
   </url>
-  
-  <!-- Menú Completo -->
+
+  <!-- Menu Page -->
   <url>
     <loc>https://www.oyamasushi.restaurant/menu</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.oyamasushi.restaurant/Sushi/SuCalifornia.webp</image:loc>
-      <image:title>Sushi California Roll</image:title>
-      <image:caption>California Roll clásico con cangrejo y aguacate</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Futomaki/FutaMar2.webp</image:loc>
-      <image:title>Futomaki de Mariscos</image:title>
-      <image:caption>Futomaki especial con variedad de mariscos frescos</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Nigiri/NigiSalmon.webp</image:loc>
-      <image:title>Nigiri de Salmón</image:title>
-      <image:caption>Nigiri premium con salmón fresco del día</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Ramen/RamenPollo.webp</image:loc>
-      <image:title>Ramen de Pollo</image:title>
-      <image:caption>Ramen miso con pollo a la parrilla</image:caption>
+      <image:title>Oyama Sushi Menu - California Roll</image:title>
     </image:image>
   </url>
-  
-  <!-- Sobre Nosotros -->
+
+  <!-- About Page -->
   <url>
     <loc>https://www.oyamasushi.restaurant/about</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.oyamasushi.restaurant/Ramen/RamenOyama.webp</image:loc>
-      <image:title>Interior del Restaurante Oyama Sushi</image:title>
-      <image:caption>Ambiente elegante y acogedor en Oyama Sushi</image:caption>
+      <image:title>Oyama Sushi - Our Story</image:title>
     </image:image>
   </url>
-  
-  <!-- Reservaciones -->
+
+  <!-- Reservations Page -->
   <url>
     <loc>https://www.oyamasushi.restaurant/reservations</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <!-- Categorías del Menú (URLs de sección) -->
-  <url>
-    <loc>https://www.oyamasushi.restaurant/menu#sushi</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
     <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Sushi/SuFiladelfia.webp</image:loc>
-      <image:title>Sushi Philadelphia</image:title>
-      <image:caption>Roll Philadelphia con salmón ahumado y queso crema</image:caption>
+      <image:loc>https://www.oyamasushi.restaurant/Futomaki/FutaMar2.webp</image:loc>
+      <image:title>Book Your Table at Oyama Sushi</image:title>
     </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.oyamasushi.restaurant/menu#ramen</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Ramen/RamenVegano.webp</image:loc>
-      <image:title>Ramen Vegano</image:title>
-      <image:caption>Delicioso ramen vegano con vegetales frescos</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.oyamasushi.restaurant/menu#nigiri</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Nigiri/NigiTuna.webp</image:loc>
-      <image:title>Nigiri de Atún</image:title>
-      <image:caption>Nigiri premium de atún rojo fresco</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.oyamasushi.restaurant/menu#futomaki</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <image:image>
-      <image:loc>https://www.oyamasushi.restaurant/Futomaki/FutaDragon.webp</image:loc>
-      <image:title>Futomaki Dragon Roll</image:title>
-      <image:caption>Espectacular Dragon Roll con anguila y aguacate</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Menú PDF -->
-  <url>
-    <loc>https://www.oyamasushi.restaurant/OyamaMenu.pdf</loc>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
